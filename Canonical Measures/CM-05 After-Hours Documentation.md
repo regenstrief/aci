@@ -30,6 +30,32 @@ Time spent on clinical documentation outside of scheduled working hours, 'pajama
 ## ⚠️ Key Note
 **Consistent null pattern in objective data:** After-hours time does NOT improve significantly in EHR telemetry across most corpus papers (Pearlman 2025, Stults 2025). Self-report shows improvement. Exceptions: Duggan 2025 (−16.9%), Boyter/KLAS 2025 (−39% UAL), Afshar 2025b (−0.50 hrs/day, but fragile: disappears after removing top 3% outliers). **Tierney 2025** adds one of the strongest objective signals in the corpus: DiD reduction in pajama time (−1.03 min, p=0.02) and time outside 7am–7pm (−1.83 min, p<0.001). This self-report/objective divergence remains one of the most reproducible findings.
 
+## Operational Algorithm
+
+**Unit:** Minutes per provider per month (after-hours EHR time)  
+**How it works:** Sum all EHR activity for each provider that falls outside scheduled working hours each month. Compare each provider's average monthly after-hours total before Suki adoption to after adoption. Average across the provider cohort. `after_hours_min` from Epic Signal/UAL is the preferred field.  
+**Delta interpretation:** Lower after-hours minutes per month after adoption indicates providers are completing notes during clinic hours rather than at home or after the workday.  
+**Watch out for:**
+- Objective EHR telemetry shows smaller and less consistent improvements than self-report — do not conflate the two
+- The effect is highly sensitive to outliers: Afshar 2025b's result disappears after removing the top 3% of high-time users
+- Ensure equal numbers of working days in pre and post windows when using monthly totals
+- Some after-hours activity is non-documentation (inbox, orders) and may not respond to Suki
+
+**Visual sketch:**
+```
+After-hours EHR time (min/month)
+
+200 |  . . .
+150 |        . .
+100 |            . .
+ 50 |                . .
+    |
+    +---Pre adoption---+---Post adoption--->
+```
+*After-hours time should trend down — but the effect is smaller and noisier than CM-04.*
+
+---
+
 ## Papers Measuring This (19)
 - [[AAFP 2021 - Using AI Assistant Reduce Documentation Burden Family Medicine]]
 - [[Afshar 2025 - Novel Playbook for Pragmatic Trial Operations]]

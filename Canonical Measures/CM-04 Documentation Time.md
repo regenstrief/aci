@@ -37,6 +37,30 @@ Aliases in this measure should be distinguished by data source:
 ## ⚠️ Key Note
 **Critical heterogeneity:** Reported reductions range from −12% (EHR telemetry: Ma 2025, Guo 2026) to −72% (self-report: AAFP 2021). Self-report consistently overestimates. EHR audit-log is the most reliable method. Papers measuring per-note time vs. per-day time are not directly comparable.
 
+## Operational Algorithm
+
+**Unit:** Minutes per encounter  
+**How it works:** For each provider, calculate average documentation time per encounter before Suki adoption and after adoption. Exclude the onboarding ramp period (first 4–6 weeks). Average the pre/post values across the provider cohort. EHR audit-log telemetry (`avg_doc_time_min` from Epic Signal/UAL or equivalent) is the preferred data source.  
+**Delta interpretation:** Lower minutes per encounter after adoption indicates Suki is reducing documentation time at the visit level.  
+**Watch out for:**
+- Self-report overestimates improvement by 3–6× compared to EHR telemetry — use objective telemetry when available
+- Per-note time and per-day time are not directly comparable; standardize the unit before comparing providers or sites
+- Seasonal case mix shifts can affect note complexity independently of Suki
+
+**Visual sketch:**
+```
+Documentation time (min/encounter)
+
+30 |  . . . .
+25 |            . . .
+20 |                    . . . .
+   |
+   +---Pre adoption---+---Post adoption--->
+```
+*Documentation time per encounter should trend down after the onboarding ramp.*
+
+---
+
 ## Papers Measuring This (31)
 - [[AAFP 2021 - Using AI Assistant Reduce Documentation Burden Family Medicine]]
 - [[Afshar 2025 - Novel Playbook for Pragmatic Trial Operations]]

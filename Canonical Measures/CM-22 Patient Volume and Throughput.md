@@ -27,6 +27,31 @@ Changes in the number of patients seen per unit time or changes in patient flow 
 ## ⚠️ Key Note
 Only 6 papers measure throughput, and the strongest data is from Shuaib 2021 (human scribe, ED), a baseline comparator, not an ambient AI study. Holmgren 2026 found +0.80 encounters/week with ambient AI adoption (statistically significant). Note: increased patient volume may not be desirable if it increases workload without compensation.
 
+## Operational Algorithm
+
+**Unit:** Completed encounters per provider per week  
+**How it works:** Count the number of completed patient encounters per provider per week. Compare each provider's average weekly encounter count before Suki adoption to after adoption (excluding the onboarding ramp). Average across the provider cohort. `total_encounters` (monthly) or `encounters_per_day` (daily average) from the EHR data pull, converted to a weekly figure, are the preferred fields.  
+**Delta interpretation:** More completed encounters per provider per week after adoption indicates providers have capacity to see additional patients, likely because Suki reduces per-encounter documentation time.  
+**Watch out for:**
+- Not all health systems want higher throughput — increased volume without adjusted staffing can raise workload
+- Normalize for scheduled clinical hours; providers working more hours will naturally see more patients
+- Exclude providers who changed specialty, site, or panel size during the measurement window
+- Verify that encounter counts include only completed, signed encounters — unsigned notes can inflate the count
+
+**Visual sketch:**
+```
+Completed encounters per provider per week
+
+22 |                    . . . .
+21 |            . . . .
+20 |  . . . .
+   |
+   +---Pre adoption---+---Post adoption--->
+```
+*Encounters per week should trend up modestly. Holmgren 2026 found +0.80/week — a real but modest effect.*
+
+---
+
 ## Papers Measuring This (7)
 - [[Albrecht 2025 - Ambient AI Clinical Documentation QI Survey]]
 - [[Boyter 2025 - Ambience Healthcare ROI Validations KLAS Report]]

@@ -20,6 +20,32 @@ Total time spent in the EHR across all tasks, note-writing, inbox management, or
 ## ⚠️ Key Note
 **Emerging measure: only 5 papers measure this explicitly.** Ma 2025 found −19.95 min/day total EHR time (largest effect in corpus) while only −6.89 min/day for documentation time specifically: suggesting ambient scribes reduce EHR burden beyond just note-writing, possibly by enabling faster note closure and less revisiting.
 
+## Operational Algorithm
+
+**Unit:** Minutes per encounter (total EHR time)  
+**How it works:** Sum all time each provider spends in the EHR per encounter — notes, inbox, orders, and results review — using audit-log telemetry. Compare the pre-adoption average to the post-adoption average per provider, then average across the cohort. `avg_total_time_min` or `business_hours_min` are the preferred fields.  
+**Delta interpretation:** Lower total EHR minutes per encounter after adoption indicates Suki is reducing EHR burden beyond just note-writing — providers are returning to the EHR less to revise or complete notes.  
+**Watch out for:**
+- Inbox time and order entry are less directly affected by ambient documentation and may dilute the signal
+- Normalize consistently (per encounter or per workday) — switching methods mid-analysis produces misleading results
+- Specialty mix matters: surgical providers spend differently than primary care; compare within specialty when possible
+- The total EHR time effect may be larger than CM-04 alone (Ma 2025: −19.95 min/day total vs. −6.89 min/day documentation), suggesting the broader measure can be more sensitive
+
+**Visual sketch:**
+```
+Total EHR time (min/encounter)
+
+40 |  . . . .
+35 |            . .
+30 |                . . .
+25 |                        . .
+   |
+   +---Pre adoption---+---Post adoption--->
+```
+*Total EHR time should trend down — the effect may be larger than documentation time alone.*
+
+---
+
 ## Papers Measuring This (5)
 - [[Cao 2024 - Artificial Intelligence-Driven Digital Scribes Dermatology]]
 - [[Liu 2024 - AI Powered Clinical Documentation Clinicians EHR Experience]]
