@@ -29,6 +29,7 @@ The presence of clinically inaccurate or fabricated content in AI-generated note
 - Hallucinations / Errors (qualitative) ([[Shah 2025 - Physician Perspectives Ambient AI Scribes|Shah 2025]])
 - Cross-replicate consistency ([[Kernberg 2023 - ChatGPT-4 Structured Medical Notes Audio Recordings|Kernberg 2023]]: 53% consistent)
 - Error Rate & Type ([[Biro 2025 - Simulation Testing Ambient Digital Scribes Case Report|Biro 2025]])
+- Note Amendment Rate — post-signature, inaccuracy subtype *(spans [[CM-08 Note Completeness and Omission Rate|CM-08]] + CM-09: re-opens that correct wrong content belong here; re-opens that add missing content belong in CM-08. Clarify with Suki whether their row-13 "amendment rate" means post-signature re-open specifically or any pre-signature edit.)*
 
 ## ⚠️ Key Note
 **Hallucinations are less common than omissions but more dangerous per-event.** Baker 2023 (36%) and Palm 2025 (31%) found highest rates. Kernberg 2023 found only 3.2% incorrect facts but 86% omissions: different definitions matter. Bundy 2024 identified negation errors ('did not' → 'did') as a specific high-risk subtype. Reproducibility failure (Kernberg): same case, different errors each run, clinicians can't predict where to check.

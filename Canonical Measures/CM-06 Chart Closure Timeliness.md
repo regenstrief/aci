@@ -32,6 +32,8 @@ Chart closure is a distinct operational metric from raw documentation time, a no
 
 **⚠️ Time to Close Encounter (Pearlman 2025):** Verify that this measures note closure, not patient discharge or room turnover (i.e., not patient movement).
 
+**⚠️ Same-day vs. 24-hour window:** Two distinct closure conventions appear in the corpus. "Same-day" is calendar-bounded (midnight of the visit date), so a 5 PM patient whose note is finished at 8 AM the next morning fails same-day but passes 24-hour. "Within 24 hours" (Afshar 2025a) is operationally preferable because it avoids penalizing late-day visits. "Same-day" (Guo 2026) is stricter and matches many institutional quality dashboards. Prefer 24-hour for pre/post evaluation; document which convention a site uses in any implementation report.
+
 ## Papers Measuring This (8)
 - [[Afshar 2025b - Pragmatic RCT Ambient AI Health Practitioner Wellbeing]]
 - [[Albrecht 2025 - Ambient AI Clinical Documentation QI Survey]]

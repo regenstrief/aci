@@ -3,7 +3,7 @@
 **D&M Dimension:** [[II - Individual Impact]]
 
 ## Definition
-Total time spent creating, editing, and finalizing a clinical note, from note initiation to note signature. The most frequently measured efficiency outcome in the corpus. Includes in-clinic documentation time. Does NOT include after-hours time (see CM-05) unless explicitly pooled.
+Clinician time spent creating, editing, and finalizing a clinical note, from note initiation to note signature. The most frequently measured efficiency outcome in the corpus. Includes in-clinic documentation time. Does NOT include after-hours time (see CM-05) unless explicitly pooled.
 
 ## Measurement Methods
 | Method | Description | Data Source |

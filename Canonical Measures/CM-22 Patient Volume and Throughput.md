@@ -27,6 +27,8 @@ Changes in the number of patients seen per unit time or changes in patient flow 
 ## ⚠️ Key Note
 Only 6 papers measure throughput, and the strongest data is from Shuaib 2021 (human scribe, ED), a baseline comparator, not an ambient AI study. Holmgren 2026 found +0.80 encounters/week with ambient AI adoption (statistically significant). Note: increased patient volume may not be desirable if it increases workload without compensation.
 
+**⚠️ "Patients seen" vs. "closed encounter count":** Suki's spreadsheet measures "total closed encounter count," which requires the note to be signed — stricter than a raw appointment count or check-in/check-out count. This is actually the more precise definition: an encounter is not complete until the chart is closed. When mapping Suki telemetry to this measure, confirm whether the source field reflects appointments scheduled, visits roomed, or notes signed. Unsigned notes can inflate counts; see the operational algorithm for guidance.
+
 ## Operational Algorithm
 
 **Unit:** Completed encounters per provider per week  

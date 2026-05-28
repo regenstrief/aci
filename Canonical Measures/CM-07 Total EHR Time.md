@@ -3,7 +3,7 @@
 **D&M Dimension:** [[II - Individual Impact]]
 
 ## Definition
-Total time spent in the EHR across all tasks, note-writing, inbox management, order entry, results review, messaging, normalized per scheduled workday. Broader than documentation time alone; captures the total EHR burden.
+Clinician time spent in the EHR across all tasks, note-writing, inbox management, order entry, results review, messaging, normalized per scheduled workday. Broader than documentation time alone; captures the total EHR burden.
 
 ## Measurement Methods
 | Method | Description | Data Source |

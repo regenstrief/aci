@@ -26,6 +26,7 @@ Whether clinically relevant information is captured in the AI-generated note, me
 - Overall Error Rate (%) ([[Arko 2025 - Documenting Care AI Comparative Commercial Scribe Tools|Arko 2025]])
 - Clinical Note Error Rate ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]])
 - New Medication Capture ([[Wang 2025 - Evaluation Framework Ambient Digital Scribing Tools|Wang 2025]])
+- Note Amendment Rate — post-signature, omission subtype *(spans CM-08 + [[CM-09 Note Inaccuracy Rate|CM-09]]: re-opens that add missing content belong here; re-opens that correct wrong content belong in CM-09. Clarify with Suki whether their row-13 "amendment rate" means post-signature specifically or any pre-signature edit.)*
 
 ## ⚠️ Key Note
 **Most consistent IQ finding in corpus:** Omissions are the dominant error type in ALL 5 simulation studies (71–86% of errors). More clinically dangerous than hallucinations at scale because missing information is harder to detect than wrong information. Patient doesn't complain about what's not in the note.
