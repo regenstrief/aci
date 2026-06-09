@@ -1,4 +1,4 @@
-# Evaluating Ambient Clinical Intelligence: A Structured Evidence Review
+# Evaluating Ambient Clinical Intelligence: A Structured Evidence Review...
 
 A systematic literature review of 54 studies evaluating Ambient Clinical Intelligence (ACI) tools, organized using the DeLone & McLean Information Systems Success Model. The review synthesizes 494 raw measure rows into 25 canonical measures across six evaluation dimensions, with an interactive web application for exploring the evidence.
 
