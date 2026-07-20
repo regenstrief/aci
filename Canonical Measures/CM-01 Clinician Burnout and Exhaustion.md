@@ -3,7 +3,7 @@
 **D&M Dimension:** [[II - Individual Impact]]
 
 ## Definition
-Provider-reported emotional exhaustion, depersonalization, and interpersonal disengagement from clinical work, the core burnout syndrome. Measured via validated psychometric instruments. Distinct from cognitive task load (in-encounter mental effort) and professional fulfillment (positive engagement).
+Provider-reported feelings of depletion, depersonalization, disengagement from work, and unmanaged work-related stress. Measured via validated psychometric instruments. Distinct from cognitive task load (in-encounter mental effort) and professional fulfillment (positive engagement).
 
 ## Measurement Methods
 | Method | Description | Data Source |

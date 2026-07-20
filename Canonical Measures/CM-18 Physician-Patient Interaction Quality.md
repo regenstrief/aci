@@ -3,7 +3,7 @@
 **D&M Dimension:** [[OI - Organizational Impact]]
 
 ## Definition
-Behavioral measures of the quality of the physician-patient interaction during the clinical encounter, including face-to-face time, clinician attentiveness, screen time reduction, and perceived engagement. Distinct from patient experience (CM-17), which is patient-reported; this is primarily clinician-reported or observed.
+Nature and perceptions of the physician-patient interaction during the clinical encounter, including face-to-face time, clinician attentiveness, screen time reduction, and perceived engagement. Distinct from patient experience (CM-17), which is patient-reported; this is primarily clinician-reported or observed.
 
 ## Measurement Methods
 | Method | Description | Data Source |

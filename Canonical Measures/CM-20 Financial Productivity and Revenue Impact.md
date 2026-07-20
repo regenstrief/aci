@@ -3,7 +3,7 @@
 **D&M Dimension:** [[OI - Organizational Impact]]
 
 ## Definition
-Changes in physician financial productivity associated with ambient AI scribe use, measured as RVU changes, revenue per clinician per year, or ROI. Captures organizational financial benefit and potential system-level cost implications.
+Revenue generated through healthcare operations associated with ambient AI scribe use, measured as RVU changes, revenue per clinician per year, or ROI.
 
 ## Measurement Methods
 | Method | Description | Data Source |

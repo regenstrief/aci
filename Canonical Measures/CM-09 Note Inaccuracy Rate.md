@@ -5,7 +5,7 @@
 *(Previously titled "Note Accuracy and Hallucination Rate", renamed to match definition, which measures inaccuracy not accuracy)*
 
 ## Definition
-The presence of clinically inaccurate or fabricated content in AI-generated notes, information that was not stated in the encounter or is factually wrong. Distinct from omissions (CM-08). Includes hallucinations (invented content) and incorrect facts (stated inaccurately).
+The presence of factual errors or fabricated content in AI-generated notes: information that was not stated in the encounter or that is stated incorrectly. Distinct from omissions (CM-08). Includes hallucinations (invented content) and incorrectly stated facts.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -26,6 +26,8 @@ The presence of clinically inaccurate or fabricated content in AI-generated note
 - Freedom from Hallucination (PDQI domain)
 - Incorrect Information ([[Palm 2025 - Quality AI Generated Clinical Notes PDQI Validation|Palm 2025]])
 - Negation Errors ([[Bundy 2024 - Administrative Loads Physicians AI Documentation Qualitative|Bundy 2024]])
+- Clinically Significant Errors ([[Bracken 2025 - Ambient AI Inpatient Documentation Simulation Orthopaedic|Bracken 2025]]: 2/60 notes, 3%) *(reclassified from CM-19: error severity without demonstrated patient outcome)*
+- Critical Errors ([[Moramarco 2022 - Human Evaluation Automatic Metrics Consultation Note Generation|Moramarco 2022]]; [[Wang 2021 - Patient-Centered Digital Scribe Automatic Medical Documentation|Wang 2021]]) *(medico-legal severity weighting; reclassified from CM-19)*
 - Hallucinations / Errors (qualitative) ([[Shah 2025 - Physician Perspectives Ambient AI Scribes|Shah 2025]])
 - Cross-replicate consistency ([[Kernberg 2023 - ChatGPT-4 Structured Medical Notes Audio Recordings|Kernberg 2023]]: 53% consistent)
 - Error Rate & Type ([[Biro 2025 - Simulation Testing Ambient Digital Scribes Case Report|Biro 2025]])
@@ -34,10 +36,11 @@ The presence of clinically inaccurate or fabricated content in AI-generated note
 ## ⚠️ Key Note
 **Hallucinations are less common than omissions but more dangerous per-event.** Baker 2023 (36%) and Palm 2025 (31%) found highest rates. Kernberg 2023 found only 3.2% incorrect facts but 86% omissions: different definitions matter. Bundy 2024 identified negation errors ('did not' → 'did') as a specific high-risk subtype. Reproducibility failure (Kernberg): same case, different errors each run, clinicians can't predict where to check.
 
-## Papers Measuring This (14)
+## Papers Measuring This (15)
 - [[Arko 2025 - Documenting Care AI Comparative Commercial Scribe Tools]]
 - [[Baker 2023 - ChatGPT Ability Assist Clinical Documentation Orthopaedic RCT]]
 - [[Biro 2025 - Simulation Testing Ambient Digital Scribes Case Report]]
+- [[Bracken 2025 - Ambient AI Inpatient Documentation Simulation Orthopaedic]]
 - [[Bundy 2024 - Administrative Loads Physicians AI Documentation Qualitative]]
 - [[Foo 2025 - Great Scribe-Off AI vs Human Documentation Simulated GP]]
 - [[Gebauer 2025 - Benchmarking Datasets Ambient Clinical Documentation Scoping Review]]

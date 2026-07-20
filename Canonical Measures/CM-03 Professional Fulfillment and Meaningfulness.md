@@ -3,7 +3,7 @@
 **D&M Dimension:** [[II - Individual Impact]]
 
 ## Definition
-Provider-reported positive engagement with clinical work, the presence of meaning, reward, and satisfaction in the work itself. The positive pole of the well-being spectrum, distinct from absence of burnout. Measured via PFI fulfillment subscale or related instruments.
+Provider-reported positive engagement with clinical work, the presence of purpose, reward, and satisfaction in the work itself. The positive pole of the well-being spectrum, distinct from absence of burnout. Measured via PFI fulfillment subscale or related instruments.
 
 ## Measurement Methods
 | Method | Description | Data Source |

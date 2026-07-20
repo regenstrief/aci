@@ -3,7 +3,7 @@
 **D&M Dimension:** [[II - Individual Impact]]
 
 ## Definition
-The mental effort, time pressure, and frustration experienced by clinicians *during* or *immediately after* a clinical encounter, the in-the-moment cognitive demand of documentation. Distinct from burnout (CM-01), which is a sustained emotional state.
+The mental effort, time pressure, and frustration experienced by clinicians *during* or *immediately after* a clinical encounter, the in-the-moment mental demand of documentation. Distinct from burnout (CM-01), which is a sustained emotional state.
 
 ## Measurement Methods
 | Method | Description | Data Source |

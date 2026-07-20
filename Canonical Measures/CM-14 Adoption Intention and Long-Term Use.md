@@ -3,7 +3,7 @@
 **D&M Dimension:** [[U - Use]]
 
 ## Definition
-Provider-reported intention to continue using the ambient AI scribe beyond the study period, including willingness to adopt and implementation readiness. Captures attitudinal vs. behavioral adoption (Technology Acceptance Model distinction).
+Provider-reported willingness to continue using the ambient AI scribe beyond the study period, including implementation readiness. Captures attitudinal rather than behavioral adoption (Technology Acceptance Model distinction); distinct from realized adoption behavior (CM-13).
 
 > **Note:** Recommendation likelihood, recommendation intention, and long-term use have been moved to CM-15 (Provider Satisfaction and Usability): these are closer to satisfaction constructs than adoption intention.
 

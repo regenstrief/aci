@@ -3,7 +3,7 @@
 **D&M Dimension:** [[OI - Organizational Impact]]
 
 ## Definition
-Patient safety outcomes associated with ambient AI documentation, including documentation errors that affect clinical decisions, adverse events, harm scores, and gaps between documented symptoms and clinical action. The most concerning and least studied outcome dimension.
+Actual or potential patient harm associated with ambient AI documentation, including documentation errors that affect clinical decisions, adverse events, harm scores, and gaps between documented symptoms and clinical action.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -16,31 +16,25 @@ Patient safety outcomes associated with ambient AI documentation, including docu
 | Patient safety survey items | Provider-reported safety concerns | Survey |
 
 ## Aliases Used in Literature
-- AHRQ Harm Score ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]])
-- Patient Safety Events ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]])
-- Critical Errors ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]])
-- Likelihood of Psychiatric Intervention ([[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe|Castro 2025]]: aOR 0.83, p=.005) *(⚠️ this is quality of care, not patient safety, measures a clinical decision rate, not a harm event; candidate for reclassification)*
-- RDoC Symptom Documentation Level ([[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe|Castro 2025]]) *(⚠️ quality of care / documentation completeness, not safety)*
-- PHQ-9 Documentation ([[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe|Castro 2025]]) *(⚠️ quality of care / documentation completeness, not safety)*
-- Patient Safety (survey) ([[Galloway 2024 - Impact Artificial Intelligence Based Solution Clinicians Clinical Documentation|Galloway 2024]], multiple)
-- Clinically Significant Errors in AI Notes ([[Biro 2025 - Simulation Testing Ambient Digital Scribes Case Report|Biro 2025]], [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]]) *(⚠️ errors without demonstrated patient outcome = technical quality, not patient safety)*
-- Negation Errors ([[Bundy 2024 - Administrative Loads Physicians AI Documentation Qualitative|Bundy 2024]]) *(⚠️ technical quality / hallucination; belongs with CM-09 unless patient outcome is documented)*
+- AHRQ Harm Score ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]]: mean 3.0 errors/case with potential for moderate-to-severe harm, AHRQ ≥2)
+- Patient Safety Events ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]]; [[Suhail 2026 - Metrics for Ambient Clinical Documentation Scoping Review|Suhail 2026]])
+- Adverse Events ([[Lukac 2025 - RCT Two Ambient AI Scribes Documentation Efficiency Burnout|Lukac 2025]]: one Grade 1 mild event across study period; no serious events)
+- Patient safety event tracking ([[Haberle 2024 - Impact Nuance DAX Ambient Listening AI Documentation|Haberle 2024]]: no safety events attributable to DAX)
+- Likelihood of Psychiatric Intervention ([[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe|Castro 2025]]: aOR 0.83, p=.005) *(a documented-symptoms-to-clinical-action gap: retained under the harm definition)*
+- Patient Safety (survey) ([[Guo 2026 - Evaluating Ambient AI Documentation UCI Health Mixed Methods|Guo 2026]]: pre 3.72 → post 4.03, p=.027) *(perception-based, not event-based)*
 
 ## ⚠️ Key Note
 **Castro 2025 is the landmark paper here:** More psychiatric symptom *documentation* but significantly *less* psychiatric *intervention* (aOR 0.83) with ambient scribe use, preprint only, but the only paper measuring what happens to patients clinically. This is a potential unintended consequence with serious safety implications. Only 9 papers touch this dimension, and most use simulated or survey data rather than real patient outcomes.
 
-**⚠️ Scope narrowing needed:** True patient safety requires measured patient harm outcomes. Errors in documentation that do not demonstrate a downstream patient outcome are technical quality issues (→ CM-09 Note Inaccuracy Rate), not safety. Severity of error is not patient safety without evidence of patient harm. *Recommendation: only Suhail 2026 and Anderson 2025 clearly belong in this safety category as currently defined. All others should be examined for reclassification.*
+**Scope narrowed (2026-07):** Definition now requires actual or potential patient harm. Error-severity measures without a demonstrated patient outcome were reclassified to CM-09 (Bracken 2025, Moramarco 2022, Wang 2021 removed from this list; Biro 2025 and Bundy 2024 alias rows relocated). Castro 2025's RDoC and PHQ-9 documentation measures moved to CM-08; its psychiatric-intervention measure remains here as a documented-symptoms-to-clinical-action gap. Guo 2026's survey measure is retained but flagged as perception-based.
 
-## Papers Measuring This (9)
+## Papers Measuring This (6)
 - [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation]]
-- [[Bracken 2025 - Ambient AI Inpatient Documentation Simulation Orthopaedic]]
 - [[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe]]
 - [[Guo 2026 - Evaluating Ambient AI Documentation UCI Health Mixed Methods]]
 - [[Haberle 2024 - Impact Nuance DAX Ambient Listening AI Documentation]]
 - [[Lukac 2025 - RCT Two Ambient AI Scribes Documentation Efficiency Burnout]]
-- [[Moramarco 2022 - Human Evaluation Automatic Metrics Consultation Note Generation]]
 - [[Suhail 2026 - Metrics for Ambient Clinical Documentation Scoping Review]]
-- [[Wang 2021 - Patient-Centered Digital Scribe Automatic Medical Documentation]]
 
 ---
 *Canonical Measures | Suki Literature Review Vault | Derived 2026-03-25, updated 2026-04-15*

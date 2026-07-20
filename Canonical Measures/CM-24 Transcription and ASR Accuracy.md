@@ -3,7 +3,7 @@
 **D&M Dimension:** [[SQ - System Quality]]
 
 ## Definition
-Technical accuracy of automatic speech recognition (ASR) in transcribing clinical conversations, word error rate, speaker diarization, and medical vocabulary recognition. The upstream quality gate: if the transcript is wrong, the note will be wrong regardless of NLP quality.
+The degree to which the transcribed output accurately reflects what was spoken during the clinical encounter.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -25,6 +25,8 @@ Technical accuracy of automatic speech recognition (ASR) in transcribing clinica
 **Only 3 papers formally measure ASR accuracy as an outcome.** Commercial products (DAX, Abridge, Suki, Ambience) do not publish their WER or diarization accuracy: a documented pattern of industry opacity since van Buchem 2021. This is a fundamental evidence gap: the acoustic quality of commercial products is entirely unknown in the published literature.
 
 **⚠️ Grouping consideration:** Transcription/ASR accuracy measures the same technical quality dimension as note quality measures (CM-08, CM-09, CM-10, CM-12). ASR accuracy is the upstream technical gate for all downstream note quality; these should be presented as a grouped category in synthesis. Consider whether CM-24 should be explicitly linked to or merged with the note quality cluster.
+
+The upstream quality gate: if the transcript is wrong, the note will be wrong regardless of NLP quality.
 
 ## Papers Measuring This (3)
 - [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation]]

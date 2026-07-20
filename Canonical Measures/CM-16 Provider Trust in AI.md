@@ -3,7 +3,7 @@
 **D&M Dimension:** [[U - Use]]
 
 ## Definition
-The degree to which clinicians perceive AI-generated documentation as accurate and dependable enough to act on without exhaustive verification. This perception shapes adoption before and during use: a clinician who doubts the output's accuracy will either reject the tool outright or spend significant time re-checking every note, negating efficiency gains. Distinct from general satisfaction (CM-15), which reflects overall experience after use, and from adoption behavior (CM-13), which captures what clinicians actually do. Perceived reliability is the attitudinal precondition that precedes and predicts both.
+The degree to which clinicians perceive AI-generated documentation as accurate and dependable enough to act on without exhaustive verification. Distinct from general satisfaction (CM-15), which reflects overall experience after use, and from adoption behavior (CM-13), which captures what clinicians actually do.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -20,6 +20,8 @@ The degree to which clinicians perceive AI-generated documentation as accurate a
 
 ## ⚠️ Key Note
 3 papers formally measure this as a study outcome; AI skepticism and reliability concerns appear qualitatively in many more. Placed in the Use dimension (U) rather than User Satisfaction (US) because perceived reliability is an attitudinal precondition that precedes adoption, not a feeling that results from it. Clinicians who doubt output accuracy reject the tool or over-verify, both of which show up as adoption failure rather than satisfaction decline. Ethical/legal concern measures (Falcetta 2023) and fear of downstream consequences (Bundy 2024) are related but distinct constructs, those belong in OI and II respectively, not here.
+
+This perception shapes adoption before and during use: a clinician who doubts the output's accuracy will either reject the tool outright or spend significant time re-checking every note, negating efficiency gains. Perceived reliability is the attitudinal precondition that precedes and predicts both satisfaction and adoption behavior.
 
 ## Papers Measuring This (3)
 - [[Afshar 2025b - Pragmatic RCT Ambient AI Health Practitioner Wellbeing]]

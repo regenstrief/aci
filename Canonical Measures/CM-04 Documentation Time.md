@@ -3,7 +3,7 @@
 **D&M Dimension:** [[II - Individual Impact]]
 
 ## Definition
-Clinician time spent creating, editing, and finalizing a clinical note, from note initiation to note signature. The most frequently measured efficiency outcome in the corpus. Includes in-clinic documentation time. Does NOT include after-hours time (see CM-05) unless explicitly pooled.
+Duration of clinician work spent creating, editing, and finalizing a clinical note, from note initiation to note signature. Includes in-clinic note-writing. Does NOT include after-hours work (see CM-05) unless explicitly pooled.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -36,6 +36,8 @@ Aliases in this measure should be distinguished by data source:
 
 ## ⚠️ Key Note
 **Critical heterogeneity:** Reported reductions range from −12% (EHR telemetry: Ma 2025, Guo 2026) to −72% (self-report: AAFP 2021). Self-report consistently overestimates. EHR audit-log is the most reliable method. Papers measuring per-note time vs. per-day time are not directly comparable.
+
+The most frequently measured efficiency outcome in the corpus.
 
 ## Operational Algorithm
 
