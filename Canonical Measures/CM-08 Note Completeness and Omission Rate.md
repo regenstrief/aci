@@ -13,6 +13,8 @@ Whether clinically relevant information is captured in the AI-generated note, me
 | [PDSQI-9](https://pubmed.ncbi.nlm.nih.gov/40323321/) / [PDQI-9](https://pubmed.ncbi.nlm.nih.gov/18436914/) Thoroughness domain | Validated subscale measuring note completeness | Human rater / LLM-as-judge |
 | Clinical note error rate (% key elements) | % of key clinical elements correctly captured | Simulation |
 | New medication capture | Whether new medications mentioned in encounter appear in note | EHR audit |
+| RDoC symptom documentation level | Neuropsychiatric symptom documentation completeness | EHR audit |
+| [PHQ-9](https://pubmed.ncbi.nlm.nih.gov/11556941/) documentation | Whether depression screening documented in note | EHR audit |
 
 ## Aliases Used in Literature
 - Omissions ([[Kernberg 2023 - ChatGPT-4 Structured Medical Notes Audio Recordings|Kernberg 2023]], [[Arko 2025 - Documenting Care AI Comparative Commercial Scribe Tools|Arko 2025]], [[Biro 2025 - Simulation Testing Ambient Digital Scribes Case Report|Biro 2025]], [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]], [[Foo 2025 - Great Scribe-Off AI vs Human Documentation Simulated GP|Foo 2025]])

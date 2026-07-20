@@ -321,7 +321,9 @@
       "Error categorization, omissions",
       "[PDSQI-9](https://pubmed.ncbi.nlm.nih.gov/40323321/) / [PDQI-9](https://pubmed.ncbi.nlm.nih.gov/18436914/) Thoroughness domain",
       "Clinical note error rate (% key elements)",
-      "New medication capture"
+      "New medication capture",
+      "RDoC symptom documentation level",
+      "[PHQ-9](https://pubmed.ncbi.nlm.nih.gov/11556941/) documentation"
     ],
     "aliases": [
       "Omissions (Kernberg 2023, Arko 2025, Biro 2025, Anderson 2025, Foo 2025)",
@@ -816,8 +818,6 @@
       "[AHRQ Harm Score](https://journals.lww.com/journalpatientsafety/abstract/2015/03000/the_reliability_of_ahrq_common_format_harm_scales.8.aspx)",
       "Adverse events / patient safety events",
       "Likelihood of psychiatric intervention (aOR)",
-      "RDoC symptom documentation level",
-      "[PHQ-9](https://pubmed.ncbi.nlm.nih.gov/11556941/) documentation",
       "Patient safety survey items"
     ],
     "aliases": [
@@ -830,7 +830,7 @@
     ],
     "typicalFindings": "",
     "rigorRating": "",
-    "concerns": "**Castro 2025 is the landmark paper here:** More psychiatric symptom *documentation* but significantly *less* psychiatric *intervention* (aOR 0.83) with ambient scribe use, preprint only, but the only paper measuring what happens to patients clinically. This is a potential unintended consequence with serious safety implications. Only 9 papers touch this dimension, and most use simulated or survey data rather than real patient outcomes.",
+    "concerns": "**Castro 2025 is the landmark paper here:** More psychiatric symptom *documentation* but significantly *less* psychiatric *intervention* (aOR 0.83) with ambient scribe use, preprint only, but the only paper measuring what happens to patients clinically. This is a potential unintended consequence with serious safety implications. Only 6 papers touch this dimension under the strict-harm scope, and most use simulated or survey data rather than real patient outcomes.",
     "papers": [
       "Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation",
       "Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe",
