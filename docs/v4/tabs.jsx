@@ -120,7 +120,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
           </div>
 
           {/* Use & Contribution Guide */}
-          <div style={{marginTop:32, padding:'24px 28px', border:'1px solid var(--rule)', background:'#faf6ea', display:'grid', gridTemplateColumns:'140px 1fr auto', gap:24, alignItems:'center'}} className="use-note">
+          <div style={{marginTop:32, padding:'24px 28px', border:'1px solid var(--rule)', background:'var(--brand-soft)', display:'grid', gridTemplateColumns:'140px 1fr auto', gap:24, alignItems:'center'}} className="use-note">
             <div>
               <div className="smallcaps" style={{marginBottom:6}}>Use &amp; Contribution</div>
               <div style={{fontFamily:'JetBrains Mono, monospace', fontSize:11, fontWeight:500, color:'var(--accent)', letterSpacing:'0.06em'}}>CC BY-SA 4.0</div>
@@ -670,7 +670,7 @@ function FrameworkTab({ dimensions, measures, articles }) {
           <div className="dm-arrow">→</div>
           <div className="dm-col">
             {['II','OI'].map(c => (
-              <div key={c} className="dm-node" style={{borderColor:'var(--accent)', background:'#faf1ea'}}>
+              <div key={c} className="dm-node" style={{borderColor:'var(--accent)', background:'var(--brand-soft)'}}>
                 <div className="code" style={{color:'var(--accent)'}}>{c}</div>
                 <div className="name">{DIM_LONG[c]}</div>
                 <div className="count">{(byDim[c]||[]).length} measures</div>
@@ -1252,7 +1252,7 @@ function MethodsTab({ setTab }) {
         <p>This work is licensed under <strong>Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</strong>. You are free to share and adapt the work, including for commercial purposes, under two conditions: attribution and ShareAlike. Beyond the legal terms, there is a community norm, if you extend this work (new reviews, refined measures, new dimensions), contribute those additions back. The framework gets better when its users keep it current.</p>
 
         <h4>Citation</h4>
-        <div style={{padding:'14px 18px', borderLeft:'3px solid var(--accent)', background:'#faf6ea', margin:'10px 0 14px', fontFamily:'Newsreader, serif', fontSize:15, fontStyle:'italic', color:'var(--ink-2)', lineHeight:1.55}}>
+        <div style={{padding:'14px 18px', borderLeft:'3px solid var(--accent)', background:'var(--brand-soft)', margin:'10px 0 14px', fontFamily:'Newsreader, serif', fontSize:15, fontStyle:'italic', color:'var(--ink-2)', lineHeight:1.55}}>
           Biondich, P., Vest, J., Allen, K., Amlung, J., &amp; Thomas, J. (2026). <em>Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone &amp; McLean IS Success Model.</em> Available at: https://pbiondich.github.io/aci/v3/
         </div>
 
@@ -1468,7 +1468,7 @@ function MappingGuideTab({ setTab }) {
           Some measures legitimately span two dimensions. When dual-coding, list both. Common pairs encountered in this corpus:
         </p>
         <div style={{border:'1px solid var(--ink)', background:'var(--paper)'}}>
-          <div style={{display:'grid', gridTemplateColumns:'2fr 1fr 3fr', gap:16, padding:'12px 18px', borderBottom:'1px solid var(--ink)', background:'#faf6ea'}}>
+          <div style={{display:'grid', gridTemplateColumns:'2fr 1fr 3fr', gap:16, padding:'12px 18px', borderBottom:'1px solid var(--ink)', background:'var(--brand-soft)'}}>
             <div className="smallcaps">Measure</div>
             <div className="smallcaps">Dimensions</div>
             <div className="smallcaps">Why</div>

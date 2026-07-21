@@ -177,18 +177,18 @@ function tierColor(tier) {
   if (tier === 'HIGH') return 'var(--green)';
   if (tier === 'MODERATE') return 'var(--gold)';
   if (tier === 'META') return 'var(--ink-3)';
-  return 'var(--accent)';
+  return 'var(--danger)';
 }
 function rigorColor(s) {
   if (s >= 80) return 'var(--green)';
   if (s >= 50) return 'var(--gold)';
-  if (s >= 30) return 'var(--accent-2)';
-  return 'var(--accent)';
+  if (s >= 30) return 'var(--serious)';
+  return 'var(--danger)';
 }
 function convColor(conv) {
   if (conv === 'converge') return 'var(--green)';
   if (conv === 'mixed') return 'var(--gold)';
-  if (conv === 'diverge') return 'var(--accent)';
+  if (conv === 'diverge') return 'var(--danger)';
   return 'var(--ink-3)';
 }
 
