@@ -1453,7 +1453,7 @@ function MappingGuideTab({ setTab }) {
               </ul>
             </div>
             <div>
-              <h4 className="mini" style={{color:'#a85a3a', marginBottom:10}}>✗ Do not assign for</h4>
+              <h4 className="mini" style={{color:'var(--danger, #a3272f)', marginBottom:10}}>✗ Do not assign for</h4>
               <ul style={{margin:0, paddingLeft:20, fontSize:14, lineHeight:1.55, color:'var(--ink-2)'}}>
                 {d.no.map((n, i) => <li key={i} style={{marginBottom:6}}>{n}</li>)}
               </ul>
