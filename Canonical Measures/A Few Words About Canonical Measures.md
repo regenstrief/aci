@@ -25,8 +25,8 @@ Prior to this derivation (2026-03-24), the vault contained 11 seeded measures th
 ### Domain: Note Information Quality (IQ)
 | ID | Name | Papers |
 |---|---|---|
-| CM-08 | Note Completeness and Omission Rate | 11 |
-| CM-09 | Note Inaccuracy Rate | 14 |
+| CM-08 | Note Completeness and Omission Rate | 12 |
+| CM-09 | Note Inaccuracy Rate | 15 |
 | CM-10 | Note Quality Overall | 17 |
 | CM-11 | Note Length and Verbosity | 11 |
 | CM-12 | Automated NLP Evaluation Metrics *(methodological)* | 7 |
@@ -48,7 +48,7 @@ Prior to this derivation (2026-03-24), the vault contained 11 seeded measures th
 |---|---|---|
 | CM-17 | Patient Experience and Relationship Quality | 18 |
 | CM-18 | Physician-Patient Interaction Quality | 12 |
-| CM-19 | Clinical Patient Safety | 9 |
+| CM-19 | Clinical Patient Safety | 6 |
 
 ### Domain: Financial & Organizational (NB)
 | ID | Name | Papers |

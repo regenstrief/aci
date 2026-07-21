@@ -3,7 +3,7 @@
 **D&M Dimension:** [[U - Use]]
 
 ## Definition
-Actual, observed use of the ambient AI scribe, measured as % of encounters in which the tool is used, number of sessions, or paid adoption post-trial. Captures behavior (what people actually do), not intention (what they say they'll do).
+Actual, observed uptake of the ambient AI scribe, measured as % of encounters in which the tool is used, number of sessions, or paid adoption post-trial. Captures behavior (what people actually do), not intention (what they say they'll do).
 
 ## Measurement Methods
 | Method | Description | Data Source |

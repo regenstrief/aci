@@ -3,7 +3,7 @@
 **D&M Dimension:** [[IQ - Information Quality]]
 
 ## Definition
-Whether clinically relevant information is captured in the AI-generated note, measured as omission rates, completeness scores, or presence of expected data elements. The most common error type in simulation studies. Represents the 'completeness' component of note quality.
+Whether clinically relevant information is captured in the AI-generated note, measured as omission rates, completeness scores, or presence of expected data elements. Represents the coverage component of note quality.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -13,6 +13,8 @@ Whether clinically relevant information is captured in the AI-generated note, me
 | [PDSQI-9](https://pubmed.ncbi.nlm.nih.gov/40323321/) / [PDQI-9](https://pubmed.ncbi.nlm.nih.gov/18436914/) Thoroughness domain | Validated subscale measuring note completeness | Human rater / LLM-as-judge |
 | Clinical note error rate (% key elements) | % of key clinical elements correctly captured | Simulation |
 | New medication capture | Whether new medications mentioned in encounter appear in note | EHR audit |
+| RDoC symptom documentation level | Neuropsychiatric symptom documentation completeness | EHR audit |
+| [PHQ-9](https://pubmed.ncbi.nlm.nih.gov/11556941/) documentation | Whether depression screening documented in note | EHR audit |
 
 ## Aliases Used in Literature
 - Omissions ([[Kernberg 2023 - ChatGPT-4 Structured Medical Notes Audio Recordings|Kernberg 2023]], [[Arko 2025 - Documenting Care AI Comparative Commercial Scribe Tools|Arko 2025]], [[Biro 2025 - Simulation Testing Ambient Digital Scribes Case Report|Biro 2025]], [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]], [[Foo 2025 - Great Scribe-Off AI vs Human Documentation Simulated GP|Foo 2025]])
@@ -27,15 +29,20 @@ Whether clinically relevant information is captured in the AI-generated note, me
 - Clinical Note Error Rate ([[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation|Anderson 2025]])
 - New Medication Capture ([[Wang 2025 - Evaluation Framework Ambient Digital Scribing Tools|Wang 2025]])
 - Note Amendment Rate — post-signature, omission subtype *(spans CM-08 + [[CM-09 Note Inaccuracy Rate|CM-09]]: re-opens that add missing content belong here; re-opens that correct wrong content belong in CM-09. Clarify with Suki whether their row-13 "amendment rate" means post-signature specifically or any pre-signature edit.)*
+- RDoC Symptom Documentation Level ([[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe|Castro 2025]]: all 6 domains higher in ambient-scribed notes, p<.001) *(relocated from CM-19: documentation completeness, not safety)*
+- PHQ-9 Documentation ([[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe|Castro 2025]]) *(relocated from CM-19)*
 
 ## ⚠️ Key Note
 **Most consistent IQ finding in corpus:** Omissions are the dominant error type in ALL 5 simulation studies (71–86% of errors). More clinically dangerous than hallucinations at scale because missing information is harder to detect than wrong information. Patient doesn't complain about what's not in the note.
 
-## Papers Measuring This (11)
+The most common error type in simulation studies.
+
+## Papers Measuring This (12)
 - [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation]]
 - [[Arko 2025 - Documenting Care AI Comparative Commercial Scribe Tools]]
 - [[Baker 2023 - ChatGPT Ability Assist Clinical Documentation Orthopaedic RCT]]
 - [[Bracken 2025 - Ambient AI Inpatient Documentation Simulation Orthopaedic]]
+- [[Castro 2025 - Psychiatric Documentation Treatment Primary Care AI Scribe]]
 - [[Foo 2025 - Great Scribe-Off AI vs Human Documentation Simulated GP]]
 - [[Karavassilis 2025 - Ambient Voice Technology Same Day Emergency Care SDEC]]
 - [[Moramarco 2022 - Human Evaluation Automatic Metrics Consultation Note Generation]]

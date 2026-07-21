@@ -3,7 +3,7 @@
 **D&M Dimension:** [[OI - Organizational Impact]]
 
 ## Definition
-The accuracy and completeness of diagnostic and billing codes generated or supported by ambient AI documentation, ICD-10 diagnosis codes, HCC (Hierarchical Condition Category) capture for risk adjustment, and E/M (Evaluation & Management) coding level. Bridges IQ (note quality sufficient for accurate coding) and NB (coding accuracy drives revenue and population health metrics).
+The correctness and completeness of diagnostic and billing codes generated or supported by ambient AI documentation, ICD-10 diagnosis codes, HCC (Hierarchical Condition Category) capture for risk adjustment, and E/M (Evaluation & Management) coding level.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -25,6 +25,8 @@ The accuracy and completeness of diagnostic and billing codes generated or suppo
 
 ## ⚠️ Key Note
 **Coding improvement is one of the most consistent findings** : appearing in Afshar 2025b (RCT, p<0.001), Boyter/KLAS 2025, and Holmgren 2026. Critically, Holmgren 2026 shows NO increase in denial rate, suggesting coding improvement is legitimate (better documentation of existing complexity, not upcoding). However, PHTI 2025 flags the population-level cost concern regardless.
+
+Bridges IQ (note quality sufficient for accurate coding) and NB (coding accuracy drives revenue and population health metrics).
 
 ## Operational Algorithm
 

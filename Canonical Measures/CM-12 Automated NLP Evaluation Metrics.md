@@ -3,7 +3,7 @@
 **D&M Dimension:** [[IQ - Information Quality]]
 
 ## Definition
-METHODOLOGICAL MEASURE. Computational similarity metrics used to evaluate AI-generated notes against reference standards, including n-gram overlap (ROUGE), semantic similarity (BERTScore), and entity-level accuracy metrics. Not a clinical outcome; measures the evaluation approach's technical validity.
+METHODOLOGICAL MEASURE. Computational similarity scores used to evaluate AI-generated notes against reference standards, including n-gram overlap (ROUGE), semantic similarity (BERTScore), and entity-level accuracy metrics. Not a clinical outcome; measures the evaluation approach's technical validity.
 
 ## Measurement Methods
 | Method | Description | Data Source |

@@ -3,7 +3,7 @@
 **D&M Dimension:** [[OI - Organizational Impact]]
 
 ## Definition
-Patient-reported or validated assessment of the quality of the patient-physician interaction, including relationship quality, satisfaction with the visit, and experience of being heard. The most underdeveloped outcome domain in the corpus, measured primarily through validated instruments in only 1 paper.
+Patient-reported or validated assessment of the quality of the patient-physician interaction, including relationship quality, satisfaction with the visit, and experience of being heard.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -30,6 +30,8 @@ Patient-reported or validated assessment of the quality of the patient-physician
 
 ## ⚠️ Key Note
 **CRITICAL GAP: almost entirely unmeasured with validated instruments.** Only Owens 2024 uses a validated patient-reported instrument (PDRQ-9): and found a null result in the masked phase (p=.31). Open-label phase was positive, suggesting patient expectation effect. All other 'patient experience' data is clinician-reported or anecdotal. No paper has measured patient-reported outcomes at scale with rigorously validated tools.
+
+The most underdeveloped outcome domain in the corpus, measured primarily through validated instruments in only 1 paper.
 
 ## Papers Measuring This (18)
 - [[Afshar 2025 - Novel Playbook for Pragmatic Trial Operations]]

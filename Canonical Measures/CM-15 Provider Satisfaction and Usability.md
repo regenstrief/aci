@@ -3,7 +3,7 @@
 **D&M Dimension:** [[US - User Satisfaction]]
 
 ## Definition
-Provider-reported satisfaction with the ambient AI scribe tool, including perceived usability, ease of use, and overall acceptability. Distinct from burnout (emotional outcome) and from adoption behavior (what they do). Captures subjective technology evaluation.
+Provider-reported perceptions and experiences of using the ambient AI scribe tool, including perceived usability, ease of use, and overall acceptability. Distinct from burnout (emotional outcome) and from adoption behavior (what they do). Captures subjective technology evaluation.
 
 ## Measurement Methods
 | Method | Description | Data Source |

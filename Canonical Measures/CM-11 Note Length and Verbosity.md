@@ -3,7 +3,7 @@
 **D&M Dimension:** [[IQ - Information Quality]]
 
 ## Definition
-The length and lexical richness of AI-generated notes, measured as word count, character count, or lexical diversity. A proxy for verbosity and informativeness. Longer notes may be more thorough or may be padded/over-generated; context determines interpretation.
+Amount of text and lexical richness of AI-generated notes, measured as word count, character count, or lexical diversity. A proxy for verbosity and informativeness.
 
 ## Measurement Methods
 | Method | Description | Data Source |
@@ -29,6 +29,8 @@ The length and lexical richness of AI-generated notes, measured as word count, c
 
 ## ⚠️ Key Note
 Note length is a secondary/proxy measure. It can indicate thoroughness (longer = more complete) or over-generation (longer = padded). Wojda 2025 and Shah 2025 flag note verbosity as a concern, physicians may need to edit down AI-generated notes, creating editing burden that offsets time savings.
+
+Longer notes may be more thorough or may be padded/over-generated; context determines interpretation.
 
 ## Papers Measuring This (11)
 - [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation]]

@@ -3,7 +3,7 @@
 **D&M Dimension:** [[IQ - Information Quality]]
 
 ## Definition
-Aggregate quality rating of the AI-generated clinical note using a validated multi-dimensional instrument. Instruments include the PDQI-9/PDSQI-9 (which assess accuracy, thoroughness, usefulness, organization, comprehensibility, succinctness, synthesis, and consistency as a composite), the SAIL score, and global quality ratings. Distinct from individual error-type measures (CM-08, CM-09).
+Global assessment of the excellence of the AI-generated clinical note using a validated multi-dimensional instrument. Instruments include the PDQI-9/PDSQI-9 (which assess accuracy, thoroughness, usefulness, organization, comprehensibility, succinctness, synthesis, and consistency as a composite), the SAIL score, and global quality ratings. Distinct from individual error-type measures (CM-08, CM-09).
 
 ## Measurement Methods
 | Method | Description | Data Source |
