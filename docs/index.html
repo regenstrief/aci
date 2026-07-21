@@ -34,55 +34,58 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
   <style>
+  @font-face{font-family:'Averta';src:url('https://www.regenstrief.org/wp-content/themes/regenstrief-institute/fonts/averta-regular.woff2') format('woff2'),url('https://www.regenstrief.org/wp-content/themes/regenstrief-institute/fonts/averta-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:'Averta';src:url('https://www.regenstrief.org/wp-content/themes/regenstrief-institute/fonts/Averta-Bold.woff2') format('woff2'),url('https://www.regenstrief.org/wp-content/themes/regenstrief-institute/fonts/Averta-Bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.6; }
+    body { font-family: 'Averta','Plus Jakarta Sans',Arial,Helvetica,sans-serif; background: #f7f9f9; color: #323c43; line-height: 1.6; }
 
     /* Navigation */
-    .nav { position: sticky; top: 0; z-index: 100; background: #1F4E79; color: white; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .nav { position: sticky; top: 0; z-index: 100; background: #0e5088; color: white; padding: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
     .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; padding: 0 24px; }
     .nav-brand { font-size: 16px; font-weight: 700; padding: 14px 0; margin-right: 32px; white-space: nowrap; }
     .nav-links { display: flex; gap: 0; }
     .nav-link { padding: 14px 18px; cursor: pointer; font-size: 14px; font-weight: 500; border-bottom: 3px solid transparent; transition: all 0.2s; color: rgba(255,255,255,0.8); }
     .nav-link:hover { background: rgba(255,255,255,0.1); color: white; }
-    .nav-link.active { border-bottom-color: #60B5FF; color: white; background: rgba(255,255,255,0.05); }
+    .nav-link.active { border-bottom-color: #24afdf; color: white; background: rgba(255,255,255,0.05); }
 
     /* Layout */
     .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
 
     /* Typography */
-    h1 { font-size: 32px; font-weight: 700; color: #1F4E79; margin-bottom: 8px; }
-    h2 { font-size: 24px; font-weight: 700; color: #1F4E79; margin: 32px 0 16px; }
+    h1 { font-size: 32px; font-weight: 700; color: #0e5088; margin-bottom: 8px; }
+    h2 { font-size: 24px; font-weight: 700; color: #0e5088; margin: 32px 0 16px; }
     h3 { font-size: 18px; font-weight: 600; color: #333; margin: 24px 0 12px; }
     p { margin-bottom: 16px; color: #444; }
 
     /* Cards */
-    .card { background: white; border-radius: 8px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+    .card { background: white; border-radius: 8px; padding: 24px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #dae2e3; }
     .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
 
     /* Stats row */
     .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 28px; }
-    .stat-card { background: white; border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
-    .stat-num { font-size: 36px; font-weight: 800; color: #1F4E79; }
+    .stat-card { background: white; border-radius: 8px; padding: 20px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #dae2e3; }
+    .stat-num { font-size: 36px; font-weight: 800; color: #0e5088; }
     .stat-label { font-size: 13px; color: #666; margin-top: 4px; }
 
     /* Badges */
     .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-    .badge-gold { background: #e8f5e9; color: #2e7d32; }
-    .badge-moderate { background: #fff3e0; color: #e65100; }
-    .badge-low { background: #fce4ec; color: #c62828; }
-    .badge-critical { background: #ffebee; color: #b71c1c; }
-    .badge-meta { background: #e3f2fd; color: #1565c0; }
-    .badge-dim { background: #ede7f6; color: #4527a0; padding: 2px 8px; font-size: 11px; }
+    .badge-gold { background: #e8f5ef; color: #2e7d5a; }
+    .badge-moderate { background: #ffefe0; color: #e67100; }
+    .badge-low { background: #fce4e6; color: #c62832; }
+    .badge-critical { background: #ffebec; color: #b71c26; }
+    .badge-meta { background: #e3f1fd; color: #1572c0; }
+    .badge-dim { background: #e9e7f6; color: #3827a0; padding: 2px 8px; font-size: 11px; }
 
     /* Tables */
     .data-table { width: 100%; border-collapse: collapse; font-size: 14px; table-layout: fixed; }
-    .data-table th { background: #1F4E79; color: white; padding: 10px 14px; text-align: left; font-weight: 600; position: sticky; top: 56px; z-index: 10; }
+    .data-table th { background: #0e5088; color: white; padding: 10px 14px; text-align: left; font-weight: 600; position: sticky; top: 56px; z-index: 10; }
     .data-table td { padding: 10px 14px; border-bottom: 1px solid #eee; vertical-align: top; }
     .data-table td.col-title { overflow-wrap: break-word; word-wrap: break-word; }
     .data-table td.col-product, .data-table td.col-design { overflow: hidden; text-overflow: ellipsis; }
-    .data-table tr:hover td { background: #f0f7ff; }
+    .data-table tr:hover td { background: #f0f8ff; }
     .data-table tr:nth-child(even) td { background: #fafbfc; }
-    .data-table tr:nth-child(even):hover td { background: #f0f7ff; }
+    .data-table tr:nth-child(even):hover td { background: #f0f8ff; }
     /* Article Explorer column widths */
     .col-year { width: 6%; }
     .col-title { width: 50%; }
@@ -110,17 +113,17 @@
     .filters { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
     .filter-select { padding: 8px 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; background: white; color: #333; min-width: 160px; }
     .search-input { padding: 8px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; flex: 1; min-width: 200px; }
-    .search-input:focus, .filter-select:focus { outline: none; border-color: #1F4E79; box-shadow: 0 0 0 2px rgba(31,78,121,0.15); }
+    .search-input:focus, .filter-select:focus { outline: none; border-color: #0e5088; box-shadow: 0 0 0 2px rgba(31,78,121,0.15); }
 
     /* Charts */
     .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin: 20px 0; }
-    .chart-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+    .chart-card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #dae2e3; }
     .chart-title { font-size: 15px; font-weight: 600; color: #333; margin-bottom: 12px; }
 
     /* Measure cards */
-    .measure-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1F4E79; cursor: pointer; transition: all 0.2s; }
+    .measure-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #0e5088; cursor: pointer; transition: all 0.2s; }
     .measure-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.12); }
-    .measure-card.expanded { border-left-color: #60B5FF; }
+    .measure-card.expanded { border-left-color: #24afdf; }
     .measure-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
     .measure-body { margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee; }
     .measure-body p { font-size: 14px; }
@@ -133,22 +136,22 @@
 
     /* Tags */
     .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
-    .tag { padding: 2px 8px; background: #e8ecf0; border-radius: 4px; font-size: 12px; color: #555; }
+    .tag { padding: 2px 8px; background: #dae2e3; border-radius: 4px; font-size: 12px; color: #555; }
 
     /* Hero */
-    .hero { background: linear-gradient(135deg, #1F4E79 0%, #2d6da3 100%); color: white; padding: 48px 24px; margin-bottom: 0; }
+    .hero { background: linear-gradient(135deg, #0e5088 0%, #2d6da3 100%); color: white; padding: 48px 24px; margin-bottom: 0; }
     .hero-inner { max-width: 1200px; margin: 0 auto; }
     .hero h1 { color: white; font-size: 36px; margin-bottom: 12px; }
     .hero p { color: rgba(255,255,255,0.85); font-size: 17px; max-width: 720px; }
     .hero .subtitle { font-size: 15px; color: rgba(255,255,255,0.65); margin-top: 8px; }
 
     /* D&M dimension colors */
-    .dim-sq { border-left-color: #7b1fa2; }
-    .dim-iq { border-left-color: #1565c0; }
-    .dim-serq { border-left-color: #00838f; }
-    .dim-u { border-left-color: #2e7d32; }
-    .dim-us { border-left-color: #ef6c00; }
-    .dim-nb { border-left-color: #c62828; }
+    .dim-sq { border-left-color: #311fa2; }
+    .dim-iq { border-left-color: #1572c0; }
+    .dim-serq { border-left-color: #006a8f; }
+    .dim-u { border-left-color: #2e7d5a; }
+    .dim-us { border-left-color: #ef7500; }
+    .dim-nb { border-left-color: #c62832; }
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -163,17 +166,17 @@
     .finding-item { padding: 6px 0; font-size: 14px; color: #444; border-bottom: 1px solid #f0f0f0; }
     .finding-item:last-child { border-bottom: none; }
     .dim-pill { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; color: white; margin-right: 4px; }
-    .dim-pill-SQ { background: #7b1fa2; }
-    .dim-pill-IQ { background: #1565c0; }
-    .dim-pill-SerQ { background: #00838f; }
-    .dim-pill-U { background: #2e7d32; }
-    .dim-pill-US { background: #ef6c00; }
-    .dim-pill-NB { background: #c62828; }
+    .dim-pill-SQ { background: #311fa2; }
+    .dim-pill-IQ { background: #1572c0; }
+    .dim-pill-SerQ { background: #006a8f; }
+    .dim-pill-U { background: #2e7d5a; }
+    .dim-pill-US { background: #ef7500; }
+    .dim-pill-NB { background: #c62832; }
 
     .rigor-bar { height: 8px; border-radius: 4px; background: #eee; overflow: hidden; margin-top: 6px; }
     .rigor-fill { height: 100%; border-radius: 4px; }
 
-    a { color: #1565c0; text-decoration: none; }
+    a { color: #1572c0; text-decoration: none; }
     a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -191,7 +194,7 @@
         data.map((d, i) => h('div', { key: i, style: { display: 'flex', alignItems: 'center', gap: 8 } },
           h('div', { style: { width: lw, fontSize: 12, color: '#555', textAlign: 'right', flexShrink: 0 } }, d[labelKey]),
           h('div', { style: { flex: 1, background: '#eee', borderRadius: 4, height: 22, position: 'relative', overflow: 'hidden' } },
-            h('div', { style: { width: (d[valueKey] / mx * 100) + '%', height: '100%', background: colorFn ? colorFn(d, i) : '#1F4E79', borderRadius: 4, transition: 'width 0.5s ease' } }),
+            h('div', { style: { width: (d[valueKey] / mx * 100) + '%', height: '100%', background: colorFn ? colorFn(d, i) : '#0e5088', borderRadius: 4, transition: 'width 0.5s ease' } }),
             h('span', { style: { position: 'absolute', right: 6, top: 2, fontSize: 11, fontWeight: 600, color: d[valueKey]/mx > 0.5 ? 'white' : '#333' } }, d[valueKey])
           )
         ))
@@ -204,7 +207,7 @@
       return h('div', { style: { display: 'flex', alignItems: 'flex-end', gap: 8, height: ht, padding: '0 8px' } },
         data.map((d, i) => h('div', { key: i, style: { flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 } },
           h('span', { style: { fontSize: 11, fontWeight: 600, color: '#333' } }, d[valueKey]),
-          h('div', { style: { width: '100%', maxWidth: 48, height: (d[valueKey] / mx * (ht - 40)) + 'px', background: colorFn ? colorFn(d, i) : '#1F4E79', borderRadius: '4px 4px 0 0', transition: 'height 0.5s ease', minHeight: 2 } }),
+          h('div', { style: { width: '100%', maxWidth: 48, height: (d[valueKey] / mx * (ht - 40)) + 'px', background: colorFn ? colorFn(d, i) : '#0e5088', borderRadius: '4px 4px 0 0', transition: 'height 0.5s ease', minHeight: 2 } }),
           h('span', { style: { fontSize: 10, color: '#666', textAlign: 'center', transform: 'rotate(-30deg)', transformOrigin: 'top center', whiteSpace: 'nowrap' } }, d[labelKey])
         ))
       );
@@ -329,8 +332,8 @@
       return p.length > 30 ? p.substring(0, 28) + '...' : p || 'Not specified';
     }
 
-    const COLORS = ['#1F4E79','#2d6da3','#4a90c4','#6db3e6','#90d4f7','#ef6c00','#c62828','#2e7d32','#7b1fa2','#00838f'];
-    const DIM_COLORS = { SQ: '#7b1fa2', IQ: '#1565c0', SerQ: '#00838f', U: '#2e7d32', US: '#ef6c00', NB: '#c62828' };
+    const COLORS = ['#0e5088','#2d6da3','#4a8cc4','#6daee6','#90c8f7','#ef7500','#c62832','#2e7d5a','#311fa2','#006a8f'];
+    const DIM_COLORS = { SQ: '#311fa2', IQ: '#1572c0', SerQ: '#006a8f', U: '#2e7d5a', US: '#ef7500', NB: '#c62832' };
     const DIM_NAMES = { SQ: 'System Quality', IQ: 'Information Quality', SerQ: 'Service Quality', U: 'Use', US: 'User Satisfaction', NB: 'Net Benefits' };
 
     const RIGOR_MAP = {
@@ -369,10 +372,10 @@
     }
 
     function getRigorColor(score) {
-      if (score >= 80) return '#2e7d32';
-      if (score >= 50) return '#ef6c00';
-      if (score >= 30) return '#e65100';
-      return '#c62828';
+      if (score >= 80) return '#2e7d5a';
+      if (score >= 50) return '#ef7500';
+      if (score >= 30) return '#e67100';
+      return '#c62832';
     }
 
     function dimPill(dim) {
@@ -435,7 +438,10 @@
         // Nav
         React.createElement('div', { className: 'nav' },
           React.createElement('div', { className: 'nav-inner' },
-            React.createElement('div', { className: 'nav-brand' }, 'ACI Evidence Review'),
+            React.createElement('div', { className: 'nav-brand' },
+              React.createElement('img', { src: 'assets/ri-mark.png', alt: 'Regenstrief Institute', style: { height: '20px', verticalAlign: 'middle', marginRight: '8px' } }),
+              'ACI Evidence Review'
+            ),
             React.createElement('div', { className: 'nav-links' },
               tabs.map(t => React.createElement('div', {
                 key: t.id, className: `nav-link ${tab === t.id ? 'active' : ''}`,
@@ -699,9 +705,9 @@
 
       return React.createElement('div', { className: 'container' },
         React.createElement('h1', null, 'Level of Rigor'),
-        React.createElement('div', { style: { background: '#FFF3E0', border: '1px solid #FFB74D', borderRadius: 8, padding: '16px 20px', marginBottom: 20 } },
-          React.createElement('strong', { style: { color: '#E65100' } }, '\u26A0\uFE0F Work in Progress'),
-          React.createElement('p', { style: { margin: '8px 0 0', color: '#BF360C', fontSize: 14 } }, 'The rigor scores below are a mockup to illustrate how this tab could work. The scores are placeholder values and do not yet reflect a validated methodology. A future version will introduce a formal scoring rubric based on study design quality, instrument validation, finding convergence, and bias risk.')
+        React.createElement('div', { style: { background: '#ffefe0', border: '1px solid #ffa44d', borderRadius: 8, padding: '16px 20px', marginBottom: 20 } },
+          React.createElement('strong', { style: { color: '#e67100' } }, '\u26A0\uFE0F Work in Progress'),
+          React.createElement('p', { style: { margin: '8px 0 0', color: '#bf0c18', fontSize: 14 } }, 'The rigor scores below are a mockup to illustrate how this tab could work. The scores are placeholder values and do not yet reflect a validated methodology. A future version will introduce a formal scoring rubric based on study design quality, instrument validation, finding convergence, and bias risk.')
         ),
         React.createElement('p', null, 'The chart below shows placeholder rigor scores (0\u2013100) for all 25 canonical measures.'),
 
@@ -805,7 +811,7 @@
 
     // ─── DRAFT MEASURES TAB ───
     function DraftMeasuresTab({ draftMeasures, expandedDraft, setExpandedDraft }) {
-      var stakeholderColors = { CFO: '#2E7D32', CMIO: '#1565C0', CPO: '#6A1B9A', COO: '#E65100' };
+      var stakeholderColors = { CFO: '#2e7d5a', CMIO: '#1572c0', CPO: '#2d1b9a', COO: '#e67100' };
 
       function stakeholderPill(role) {
         return React.createElement('span', {
@@ -817,13 +823,13 @@
       return React.createElement('div', { className: 'container' },
         React.createElement('h1', null, 'Draft Measures'),
         React.createElement('p', null, 'Proposed additional measures identified through a stakeholder gap analysis brainstorming exercise.  These are draft pending validation via key informant interviews with healthcare executives (CFO, CMIO, CPO, COO).'),
-        React.createElement('div', { style: { background: '#FFF3E0', border: '1px solid #FFB74D', borderRadius: 8, padding: '12px 16px', marginBottom: 24, fontSize: 14 } },
+        React.createElement('div', { style: { background: '#ffefe0', border: '1px solid #ffa44d', borderRadius: 8, padding: '12px 16px', marginBottom: 24, fontSize: 14 } },
           React.createElement('strong', null, 'Note: '),
           'These are not yet canonical measures. They represent gaps identified in the published literature that may be important for executive decision-making about ACI investments. Validation through key informant interviews will determine which become formal measures.'
         ),
         draftMeasures.map((dm, i) => {
           var isExpanded = expandedDraft === dm.id;
-          return React.createElement('div', { key: dm.id, className: 'card', style: { marginBottom: 12, cursor: 'pointer', borderLeft: '4px solid #FFB74D' },
+          return React.createElement('div', { key: dm.id, className: 'card', style: { marginBottom: 12, cursor: 'pointer', borderLeft: '4px solid #ffa44d' },
             onClick: () => setExpandedDraft(isExpanded ? null : dm.id) },
             React.createElement('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' } },
               React.createElement('div', null,
@@ -894,11 +900,11 @@
     // ─── DECISION GUIDE TAB ───
     function DecisionGuideTab({ measures, draftMeasures, guideRole, setGuideRole }) {
       var roles = [
-        { id: 'CMIO', label: 'CMIO', color: '#1565C0', desc: 'Clinical safety, documentation quality, system performance, and evidence rigor' },
-        { id: 'CFO', label: 'CFO', color: '#2E7D32', desc: 'Financial justification, ROI, revenue impact, and cost management' },
-        { id: 'COO', label: 'COO', color: '#E65100', desc: 'Operational scalability, reliability, workflow impact, and throughput' },
-        { id: 'CPO', label: 'Chief People Officer', color: '#6A1B9A', desc: 'Workforce wellbeing, retention, equity, and clinician experience' },
-        { id: 'ALL', label: 'All Roles', color: '#1F4E79', desc: 'Complete view across all executive stakeholders' },
+        { id: 'CMIO', label: 'CMIO', color: '#1572c0', desc: 'Clinical safety, documentation quality, system performance, and evidence rigor' },
+        { id: 'CFO', label: 'CFO', color: '#2e7d5a', desc: 'Financial justification, ROI, revenue impact, and cost management' },
+        { id: 'COO', label: 'COO', color: '#e67100', desc: 'Operational scalability, reliability, workflow impact, and throughput' },
+        { id: 'CPO', label: 'Chief People Officer', color: '#2d1b9a', desc: 'Workforce wellbeing, retention, equity, and clinician experience' },
+        { id: 'ALL', label: 'All Roles', color: '#0e5088', desc: 'Complete view across all executive stakeholders' },
       ];
 
       // Map canonical measures to stakeholder roles
@@ -948,13 +954,13 @@
         ),
 
         // Canonical Measures section
-        React.createElement('h2', { style: { borderBottom: '2px solid #1F4E79', paddingBottom: 8, marginBottom: 16 } }, 'Literature-Derived Measures'),
+        React.createElement('h2', { style: { borderBottom: '2px solid #0e5088', paddingBottom: 8, marginBottom: 16 } }, 'Literature-Derived Measures'),
         React.createElement('p', { style: { fontSize: 14, color: '#666', marginBottom: 16 } },
           guideRole === 'ALL'
             ? 'All 25 canonical measures derived from the published evidence base.'
             : filteredCMs.length + ' canonical measures most relevant to the ' + activeRole.label + '.'
         ),
-        filteredCMs.map(m => React.createElement('div', { key: m.id, className: 'card', style: { marginBottom: 10, borderLeft: '4px solid #1F4E79' } },
+        filteredCMs.map(m => React.createElement('div', { key: m.id, className: 'card', style: { marginBottom: 10, borderLeft: '4px solid #0e5088' } },
           React.createElement('div', { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center' } },
             React.createElement('div', null,
               React.createElement('strong', null, m.id + ' '),
@@ -963,9 +969,9 @@
             ),
             React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: 12 } },
               React.createElement('span', { style: { fontSize: 12, color: '#666' } }, m.paperCount + ' papers'),
-              m.paperCount >= 10 && React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#4CAF50' } }),
-              m.paperCount >= 5 && m.paperCount < 10 && React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#FFC107' } }),
-              m.paperCount < 5 && React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#f44336' } })
+              m.paperCount >= 10 && React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#4caf83' } }),
+              m.paperCount >= 5 && m.paperCount < 10 && React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#ff8107' } }),
+              m.paperCount < 5 && React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#f43642' } })
             )
           ),
           m.definition && React.createElement('p', { style: { fontSize: 13, color: '#555', margin: '8px 0 0' } }, React.createElement(MdText, { text: m.definition }))
@@ -973,13 +979,13 @@
 
         // Evidence gaps section
         filteredDMs.length > 0 && React.createElement(React.Fragment, null,
-          React.createElement('h2', { style: { borderBottom: '2px solid #FFB74D', paddingBottom: 8, marginTop: 32, marginBottom: 16 } }, 'Additional Draft Measures'),
+          React.createElement('h2', { style: { borderBottom: '2px solid #ffa44d', paddingBottom: 8, marginTop: 32, marginBottom: 16 } }, 'Additional Draft Measures'),
           React.createElement('p', { style: { fontSize: 14, color: '#666', marginBottom: 16 } },
             guideRole === 'ALL'
               ? 'All 12 draft measures identified through stakeholder gap analysis — pending key informant validation.'
               : filteredDMs.length + ' evidence gaps most relevant to the ' + activeRole.label + '.'
           ),
-          filteredDMs.map(dm => React.createElement('div', { key: dm.id, className: 'card', style: { marginBottom: 10, borderLeft: '4px solid #FFB74D' } },
+          filteredDMs.map(dm => React.createElement('div', { key: dm.id, className: 'card', style: { marginBottom: 10, borderLeft: '4px solid #ffa44d' } },
             React.createElement('div', null,
               React.createElement('strong', null, dm.id + ' '),
               React.createElement('span', null, dm.name),
@@ -1003,9 +1009,9 @@
           React.createElement('span', null, filteredDMs.length + ' draft measures pending validation'),
           React.createElement('span', null, ' · '),
           React.createElement('span', null, 'Evidence strength: '),
-          React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#4CAF50' } }), ' 10+ papers ',
-          React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#FFC107' } }), ' 5-9 ',
-          React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#f44336' } }), ' <5'
+          React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#4caf83' } }), ' 10+ papers ',
+          React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#ff8107' } }), ' 5-9 ',
+          React.createElement('span', { style: { display: 'inline-block', width: 10, height: 10, borderRadius: '50%', background: '#f43642' } }), ' <5'
         )
       );
     }
