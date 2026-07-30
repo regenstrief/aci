@@ -1,11 +1,11 @@
 # A Few Words About Canonical Measures
 
 ## Derivation Method
-These 25 canonical measures were **derived bottom-up** from 494 raw measure rows extracted from Study Measures tables across 54 papers in the corpus. They were NOT pre-defined: they emerged from clustering synonymous and related measures into conceptually distinct constructs.
+These 24 canonical measures were **derived bottom-up** from 494 raw measure rows extracted from Study Measures tables across 54 papers in the corpus. They were NOT pre-defined: they emerged from clustering synonymous and related measures into conceptually distinct constructs.
 
 Prior to this derivation (2026-03-24), the vault contained 11 seeded measures that were imposed top-down from early in the project. Those have been replaced by this evidence-grounded set.
 
-## The 25 Canonical Measures
+## The 24 Canonical Measures
 
 ### Domain: Clinician Well-Being (US)
 | ID | Name | Papers |
@@ -35,7 +35,7 @@ Prior to this derivation (2026-03-24), the vault contained 11 seeded measures th
 | ID | Name | Papers |
 |---|---|---|
 | CM-13 | Adoption Behavior and Utilization Rate | 13 |
-| CM-14 | Adoption Intention and Long-Term Use | 6 |
+| CM-14 | Intention for Long Term Use | 6 |
 
 ### Domain: User Satisfaction (US)
 | ID | Name | Papers |
@@ -66,7 +66,6 @@ Prior to this derivation (2026-03-24), the vault contained 11 seeded measures th
 | ID | Name | Papers |
 |---|---|---|
 | CM-24 | Transcription and ASR Accuracy | 3 |
-| CM-25 | Evaluation Methodology Quality *(meta)* | 14 |
 
 ## Key Derivation Decisions
 
@@ -77,7 +76,9 @@ Prior to this derivation (2026-03-24), the vault contained 11 seeded measures th
 5. **Patient outcomes split into 3:** Patient Experience (CM-17) + Interaction Quality (CM-18) + Patient Safety (CM-19)
 
 ---
-*Updated: 2026-04-15 | Derived from 494 raw measure rows, 54 papers*
+*Updated: 2026-07-21 | Derived from 494 raw measure rows, 54 papers*
+
+**2026-07-21 update:** CM-25 (Evaluation Methodology Quality) retired as a canonical measure and reclassified as [[RM-01 Evaluation Methodology Quality]] in the Rigor class: it assesses study rigor, not technology impact. Identifier retired, not reused. Canonical set is now CM-01 through CM-24 (24 measures).
 
 **2026-04-15 update:** Paper counts refreshed after automated linkage validation (25 missing links fixed across 15 CMs). CM-09 renamed to "Note Inaccuracy Rate"; CM-10 renamed to "Note Quality Overall" (accommodates SAIL Score alongside PDQI-9).
 

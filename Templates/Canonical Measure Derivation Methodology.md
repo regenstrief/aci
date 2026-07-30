@@ -2,7 +2,7 @@
 
 ## Overview
 
-The 25 canonical measures (CM-01 through CM-25) were derived bottom-up from raw study measures extracted across 54 articles in the ACI Evidence Review corpus. This document describes the derivation process, the linkage validation approach, and known limitations.
+The 24 canonical measures (CM-01 through CM-24; a 25th, CM-25 Evaluation Methodology Quality, was retired 2026-07-21 and reclassified as rigor measure RM-01) were derived bottom-up from raw study measures extracted across 54 articles in the ACI Evidence Review corpus. This document describes the derivation process, the linkage validation approach, and known limitations.
 
 ## Step 1: Raw Measure Extraction
 

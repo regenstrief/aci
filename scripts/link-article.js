@@ -56,7 +56,6 @@ const CM_PATTERNS = {
   'CM-22': [/patient.*(?:volume|throughput)/i, /encounters per/i, /patients seen per/i, /door.?to/i, /length of stay/i, /room.?to.?doc/i],
   'CM-23': [/implementation.*(?:barrier|theme)/i, /workflow.*(?:fit|adaptation|disruption|efficiency)/i, /learning curve/i, /specialty.*(?:specific|moderator|subgroup|variation)/i, /encounter suitability/i, /non.?adopter/i],
   'CM-24': [/transcription accuracy/i, /word error rate/i, /\bwer\b/i, /\basr accuracy\b/i, /speaker diarization/i, /medical term recall/i, /transcript error/i],
-  'CM-25': [/inter.?rater.*reliability/i, /\bicc\b/i, /benchmark dataset/i, /quest framework/i, /seips/i, /llm.?as.?(?:evaluator|judge)/i, /cross.?replicate consistency/i],
 };
 
 // D&M dimension patterns — match against the D&M Dimension(s) column in study measures tables
@@ -84,7 +83,6 @@ const SUPPRESS = [
   // PDQI Accuracy subdomain is part of CM-10, not CM-09
   ['Bracken 2025', 'CM-09'],
   // QUEST/SEIPS are evaluation frameworks, not study quality instruments
-  ['Kanaparthy 2025', 'CM-25'],
   // "EHR Experience" is perception, not time
   ['You 2025', 'CM-07'],
   // "Patient Trust" ≠ Provider Trust in AI

@@ -9,14 +9,14 @@ The DeLone & McLean IS Success Model (updated 2003) is a validated framework for
 
 | Dimension                    | Code | Core Question                                              | CMs | Papers |
 | ---------------------------- | ---- | ---------------------------------------------------------- | --- | ------ |
-| [[SQ - System Quality]]      | SQ   | Does the *tool itself* work reliably and accurately?       | 2   | 14     |
+| [[SQ - System Quality]]      | SQ   | Does the *tool itself* work reliably and accurately?       | 1   | 14     |
 | [[IQ - Information Quality]] | IQ   | Is the *output* (the note) accurate, complete, and useful? | 5   | 31     |
 | [[SerQ - Service Quality]]   | SerQ | Is the *vendor/deployment experience* effective?           | 1   | 8      |
 | [[U - Use]]                  | U    | Do people actually *use* it, and how much?                 | 2   | 13     |
 | [[US - User Satisfaction]]   | US   | How do people *feel* about it?                             | 5   | 35     |
 | [[NB - Net Benefits]]        | NB   | What *downstream outcomes* does it produce?                | 10  | 41     |
 
-**Total canonical measures: 25 | Derived bottom-up from 494 raw measure rows across 54 papers**
+**Total canonical measures: 24 | Derived bottom-up from 494 raw measure rows across 54 papers** *(CM-25 retired 2026-07-21 → [[RM-01 Evaluation Methodology Quality]])*
 
 ## Causal Logic
 The model proposes a causal flow:

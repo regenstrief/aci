@@ -17,12 +17,13 @@ System Quality assesses the **technical performance of the ambient AI tool itsel
 - Quality of the generated note (→ [[IQ - Information Quality]])
 - Provider experience with the system (→ [[US - User Satisfaction]])
 
-## Canonical Measures in this Dimension (2)
+## Canonical Measures in this Dimension (1)
 - [[CM-24 Transcription and ASR Accuracy]] (3 papers)
-- [[CM-25 Evaluation Methodology Quality]] (14 papers)
+
+*Study-rigor assessment formerly tracked here as CM-25 now lives at [[RM-01 Evaluation Methodology Quality]] (Rigor class).*
 
 ## ⚠️ Evidence Gap
-SQ is the most evidence-sparse dimension in the corpus. Commercial ambient AI products (DAX, Abridge, Suki, Ambience) do not publish transcription accuracy, WER, or diarization performance data, a documented pattern of industry opacity since van Buchem 2021. Only 3 papers formally measure ASR accuracy. CM-25 (Evaluation Methodology Quality) is a meta-measure assessing research rigor rather than a direct clinical outcome.
+SQ is the most evidence-sparse dimension in the corpus. Commercial ambient AI products (DAX, Abridge, Suki, Ambience) do not publish transcription accuracy, WER, or diarization performance data, a documented pattern of industry opacity since van Buchem 2021. Only 3 papers formally measure ASR accuracy.
 
 ## Papers in this Dimension (24)
 - [[Anderson 2025 - Quality Safety Ambient Digital Scribe Platforms Simulation]]

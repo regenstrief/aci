@@ -289,7 +289,7 @@ function mapMeasuresToDomains(measures) {
     'Patient Outcomes': ['CM-17', 'CM-18', 'CM-19'],
     'Financial & Organizational': ['CM-20', 'CM-21', 'CM-22'],
     'Implementation': ['CM-23'],
-    'System Quality': ['CM-24', 'CM-25']
+    'System Quality': ['CM-24']
   };
   return measures.map(measure => {
     for (const [domain, ids] of Object.entries(domainMap)) {

@@ -15,7 +15,7 @@ ACI tools operate in real-time during clinical encounters. When they fail, the c
 
 ## Relationship to Existing Canonical Measures
 - [[CM-24 System Quality]]: reliability is a component of system quality but not explicitly measured in the corpus
-- [[CM-25 System Quality]]: technical performance measures don't include uptime or failure mode data
+- [[CM-24 Transcription and ASR Accuracy]] / [[RM-01 Evaluation Methodology Quality]]: technical performance measures don't include uptime or failure mode data
 
 ## Suggested Measurement Methods
 | Method | Description | Data Source |

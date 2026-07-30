@@ -20,7 +20,7 @@ Use captures **whether and how much the ambient AI tool is actually used** : bot
 
 ## Canonical Measures in this Dimension (3)
 - [[CM-13 Adoption Behavior and Utilization Rate]] (12 papers)
-- [[CM-14 Adoption Intention and Long-Term Use]]
+- [[CM-14 Intention for Long Term Use]]
 - [[CM-16 Provider Trust in AI]] (5 papers)
 
 ## ⚠️ Key Finding: Dose-Response and Heterogeneity
