@@ -43,7 +43,6 @@ const CM_PATTERNS = {
   'CM-09': [/hallucination/i, /(?<!coding )(?<!asr )(?<!transcription )accuracy(?!.*coding)/i, /incorrect.*fact/i, /addition error/i, /\berror rate.*type\b/i, /clinically significant inaccurac/i, /incorrect statement/i, /negation error/i, /fabricat/i, /documentation accuracy concern/i],
   'CM-10': [/pdqi/i, /pdsqi/i, /\bnote quality\b/i, /documentation quality(?!.*coding)/i, /sail score/i],
   'CM-11': [/note length/i, /word count/i, /characters per/i, /verbosity/i, /lexical diversity/i, /note length ratio/i, /documentation length/i, /progress note length/i],
-  'CM-12': [/rouge/i, /bertscore/i, /bleurt/i, /\bf1 score\b/i, /automatic metric/i, /nlp.*extraction/i],
   'CM-13': [/utilization rate/i, /adoption rate/i, /\busage rate\b/i, /\busage level\b/i, /inclusion rate/i, /license relinquish/i, /scribe utilization/i],
   'CM-14': [/intention to use/i, /willingness to adopt/i, /recommendation likelihood/i, /recommendation intention/i, /would recommend/i, /implementation intent/i],
   'CM-15': [/(?:physician|clinician|provider|employee) satisfaction/i, /system usability/i, /usability.*(?:rating|scale)/i, /utaut/i, /perceived usefulness/i, /net promoter/i, /clinician experience/i],

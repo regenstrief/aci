@@ -283,7 +283,7 @@ function mapMeasuresToDomains(measures) {
   const domainMap = {
     'Clinician Well-Being': ['CM-01', 'CM-02', 'CM-03'],
     'Documentation Efficiency': ['CM-04', 'CM-05', 'CM-06', 'CM-07'],
-    'Note Information Quality': ['CM-08', 'CM-09', 'CM-10', 'CM-11', 'CM-12'],
+    'Note Information Quality': ['CM-08', 'CM-09', 'CM-10', 'CM-11'],
     'Adoption & Use':            ['CM-13', 'CM-14', 'CM-16'],
     'User Satisfaction':         ['CM-15'],
     'Patient Outcomes': ['CM-17', 'CM-18', 'CM-19'],

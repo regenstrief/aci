@@ -1,9 +1,11 @@
-# CM-12 Automated NLP Evaluation Metrics
+# RM-02 Automated NLP Evaluation Metrics
+
+> **Reclassified 2026-07-21:** Formerly CM-12. Retired as a canonical measure: the papers linked here validate NLP metrics as evaluation *instruments* (e.g., correlation with human judgment) rather than using them to measure ambient AI impact. Constructs stay canonical (CM-08/09/10/11); instruments and their validity research live in the Rigor class. The CM-12 identifier is retired, not reused.
 
 **D&M Dimension:** [[IQ - Information Quality]]
 
 ## Definition
-METHODOLOGICAL MEASURE. Computational similarity scores used to evaluate AI-generated notes against reference standards, including n-gram overlap (ROUGE), semantic similarity (BERTScore), and entity-level accuracy metrics. Not a clinical outcome; measures the evaluation approach's technical validity.
+Computational similarity scores used to evaluate AI-generated notes against reference standards, including n-gram overlap (ROUGE), semantic similarity (BERTScore), and entity-level accuracy metrics. Not a clinical outcome; measures the evaluation approach's technical validity.
 
 ## Measurement Methods
 | Method | Description | Data Source |

@@ -17,15 +17,16 @@ Information Quality assesses the **quality, accuracy, and completeness of the ge
 - Time to create the note (→ [[NB - Net Benefits]])
 - Provider's *feeling* about note quality (→ [[US - User Satisfaction]])
 
-## Canonical Measures in this Dimension (5)
+## Canonical Measures in this Dimension (4)
 - [[CM-08 Note Completeness and Omission Rate]] (11 papers)
 - [[CM-09 Note Inaccuracy Rate]] (13 papers)
 - [[CM-10 Note Quality Overall]] (17 papers)
 - [[CM-11 Note Length and Verbosity]] (10 papers)
-- [[CM-12 Automated NLP Evaluation Metrics]] (7 papers)
+
+*Automated NLP metric validation, formerly tracked here as CM-12, now lives at [[RM-02 Automated NLP Evaluation Metrics]] (Rigor class).*
 
 ## ⚠️ Key Finding: Omission Dominance
-Across all 5 simulation studies in the corpus (Arko 2025, Biro 2025, Anderson 2025, Foo 2025, Kernberg 2023), omissions are the dominant error type (71–86% of all errors). Hallucinations/additions are secondary. More clinically dangerous than hallucinations at scale because missing information is harder to detect. CM-12 (Automated NLP Metrics) is a methodological measure, ROUGE/BERTScore capture textual similarity, not clinical accuracy; Moramarco 2022 showed Levenshtein distance performs as well as BERTScore.
+Across all 5 simulation studies in the corpus (Arko 2025, Biro 2025, Anderson 2025, Foo 2025, Kernberg 2023), omissions are the dominant error type (71–86% of all errors). Hallucinations/additions are secondary. More clinically dangerous than hallucinations at scale because missing information is harder to detect. RM-02 (Automated NLP Metrics, Rigor class) documents that ROUGE/BERTScore capture textual similarity, not clinical accuracy; Moramarco 2022 showed Levenshtein distance performs as well as BERTScore.
 
 ## Papers in this Dimension (38)
 - [[Afshar 2025b - Pragmatic RCT Ambient AI Health Practitioner Wellbeing]]
