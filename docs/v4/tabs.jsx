@@ -20,7 +20,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
     { kicker: 'n = 3 / 54', headline: <>Only <em>three</em> randomized trials anchor a literature the size of a regulated drug class.</>, source: 'Afshar 2025b, Lukac 2025, Baker 2023' },
     { kicker: '71–86%', headline: <>Across every simulation study, <em>omissions</em> dominate the error profile... not hallucinations.</>, source: 'Anderson 2025, Biro 2025, Foo 2025' },
     { kicker: '2–6×', headline: <>Clinicians self-report <em>two to six times</em> more time saved than EHR logs confirm.</>, source: 'Haberle 2024, Ma 2025, Tierney 2025' },
-    { kicker: 'n ≈ 0', headline: <>Real-world <em>patient safety</em> data on ambient AI tools is effectively absent.</>, source: 'CM-19 · 9 papers, all simulated' },
+    { kicker: 'n ≈ 0', headline: <>Real-world <em>patient safety</em> data on ambient AI tools is effectively absent.</>, source: 'CM-19 · 6 papers; mostly simulated or survey-based' },
     { kicker: 'CM-21', headline: <>Coding accuracy and HCC capture improvements are <em>consistent and validated</em>.</>, source: '6 papers converge' },
     { kicker: 'SerQ', headline: <>Implementation evidence is <em>almost entirely qualitative</em>... no validated instruments.</>, source: 'Afshar 2025a, PHTI 2025' }
   ];
@@ -40,7 +40,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
               clinical <span className="em accent">intelligence</span>.
             </h1>
             <p className="lede" style={{marginTop:24}}>
-              <span className="drop">T</span>wenty-five canonical measures, twelve draft measures pending key-informant validation, and four hundred and ninety-four raw measure rows, distilled from a full-text review of fifty-four studies on the ambient AI scribes now documenting millions of clinical encounters a month.
+              <span className="drop">T</span>wenty-four canonical measures, twelve draft measures pending key-informant validation, and four hundred and ninety-four raw measure rows, distilled from a full-text review of fifty-four studies on the ambient AI scribes now documenting millions of clinical encounters a month.
             </p>
           </div>
           <div className="hero-byline">
@@ -81,7 +81,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
             <p style={{fontSize:18, color:'var(--ink)'}}>
               Ambient clinical intelligence... AI that listens to a clinical conversation and writes the note, has become one of the fastest-adopted categories in modern healthcare. Yet the published evidence evaluating these tools remains <em>fragmented, heterogeneous, and methodologically uneven</em>.
             </p>
-            <p>This review takes a bottom-up approach. Rather than impose an a priori taxonomy, every outcome measure was extracted verbatim from each study's methods section, clustered into conceptually distinct constructs, and mapped to one of seven dimensions from the DeLone & McLean Information Systems Success Model. The result is a twenty-five-measure vocabulary for comparing results across an otherwise incoherent body of work.</p>
+            <p>This review takes a bottom-up approach. Rather than impose an a priori taxonomy, every outcome measure was extracted verbatim from each study's methods section, clustered into conceptually distinct constructs, and mapped to one of seven dimensions from the DeLone & McLean Information Systems Success Model. The result is a twenty-four-measure vocabulary for comparing results across an otherwise incoherent body of work.</p>
             <p>The <em>draft measures</em>, the second product of this review, emerge from a different source. Through key-informant interviews with health-system decision-makers, twelve additional constructs surfaced as important to CFO, CMIO, COO, and CPO audiences but are effectively absent from the published literature. They are named here not as validated measures but as a research agenda.</p>
           </div>
           <aside className="aside">
@@ -205,7 +205,7 @@ function MeasuresTab({ measures, expanded, setExpanded, articles, onSelectArticl
     <div className="page">
       <div style={{marginBottom:32}}>
         <div className="smallcaps">II · Canonical Measures</div>
-        <h1 className="display" style={{fontSize:54, marginTop:8}}>Twenty-five constructs,<br/><span className="em">derived from the data</span>.</h1>
+        <h1 className="display" style={{fontSize:54, marginTop:8}}>Twenty-four constructs,<br/><span className="em">derived from the data</span>.</h1>
         <p className="lede" style={{marginTop:16, maxWidth:720}}>Clustered bottom-up from 494 raw measure rows across 54 papers. Each measure is grounded in the instruments and findings that researchers actually used.</p>
       </div>
 
@@ -978,7 +978,7 @@ function MethodsTab({ setTab }) {
 
       <div className="grid-feature" style={{marginBottom:48}}>
         <div className="body-text">
-          <p>The sections below describe, in order, the <em>corpus</em> we read, the <em>template</em> we used to abstract each paper, the <em>framework</em> we mapped measures into, the <em>derivation</em> that produced the twenty-five canonical measures, and the <em>tooling</em> that keeps it all reproducible.</p>
+          <p>The sections below describe, in order, the <em>corpus</em> we read, the <em>template</em> we used to abstract each paper, the <em>framework</em> we mapped measures into, the <em>derivation</em> that produced the twenty-four canonical measures, and the <em>tooling</em> that keeps it all reproducible.</p>
           <p>Where a procedure required a judgment call, we have tried to name it. Where a methodology document lives in the source repository, it is linked.</p>
         </div>
         <aside className="aside">
@@ -1102,7 +1102,7 @@ function MethodsTab({ setTab }) {
       <AccordionSection
         num="4"
         title="Deriving the canonical measures"
-        sub="Four hundred ninety-four raw rows, twenty-five canonical constructs, bottom-up."
+        sub="Four hundred ninety-four raw rows, twenty-four canonical constructs, bottom-up."
       >
         <p>The most distinctive aspect of this review is that the canonical-measure taxonomy was <em>derived from the data, not imposed on it</em>. Earlier in the project, we worked with eleven seeded measures inherited from prior literature reviews. Those were discarded in March 2026 in favor of an evidence-grounded set built bottom-up from the 494 raw measure rows in the corpus.</p>
 
