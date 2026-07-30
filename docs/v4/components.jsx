@@ -129,8 +129,7 @@ const RIGOR = {
   'CM-17':{t:'LOW',s:15,l:'Critical'},       'CM-18':{t:'LOW',s:25,l:'Needs work'},
   'CM-19':{t:'LOW',s:15,l:'Critical'},       'CM-20':{t:'MODERATE',s:55,l:'Low'},
   'CM-21':{t:'HIGH',s:85,l:'Best relative'}, 'CM-22':{t:'LOW',s:25,l:'Needs work'},
-  'CM-23':{t:'MODERATE',s:45,l:'Needs work'},'CM-24':{t:'LOW',s:10,l:'Critical'},
-  'CM-25':{t:'META',s:50,l:'Meta'}
+  'CM-23':{t:'MODERATE',s:45,l:'Needs work'},'CM-24':{t:'LOW',s:10,l:'Critical'}
 };
 
 /* --- Convergence map --- */
@@ -150,7 +149,7 @@ const CONVERGENCE = {
   'CM-11':{c:'mixed',    r:'Longer notes can signal thoroughness or over-generation. Clinicians flag verbosity as a concern even when quality scores are high.'},
   'CM-12':{c:'converge', r:'NLP evaluation metrics (ROUGE, BERTScore) correlate with each other but not always with clinical judgment, a known limitation.'},
   'CM-13':{c:'converge', r:'Every large deployment reports the same bimodal pattern: heavy users who use it for nearly all encounters, and light/non-users.'},
-  'CM-14':{c:'emerging', r:'Only 6 papers formally measure adoption intention. Tierney 2025 found age and experience are NOT predictive, challenging assumptions.'},
+  'CM-14':{c:'emerging', r:'Only 6 papers formally measure intention for long-term use. Tierney 2025 found age and experience are NOT predictive, challenging assumptions.'},
   'CM-15':{c:'mixed',    r:'Satisfaction is almost universally positive, but most studies recruited volunteers, inflating results. Prasad 2025 is the counter-signal.'},
   'CM-16':{c:'converge', r:'Across the 3 papers measuring this formally, the signal is convergent: perceived reliability gates adoption. Clinicians who doubt output accuracy either reject the tool outright or over-verify every note, both manifest as adoption failure rather than satisfaction decline.'},
   'CM-17':{c:'diverge',  r:'Patient experience is positive in open-label studies but null when patients are masked to whether AI was used (Owens 2024, PDRQ-9).'},
@@ -160,8 +159,7 @@ const CONVERGENCE = {
   'CM-21':{c:'converge', r:'Coding accuracy improvement is consistent across RCT (Afshar 2025b, p<0.001), QI (Boyter/KLAS), and observational (Holmgren) designs.'},
   'CM-22':{c:'emerging', r:'The strongest throughput data is from human scribes (Shuaib 2021, +39% patients/hr). Ambient AI evidence shows modest gains at best.'},
   'CM-23':{c:'converge', r:'Heterogeneous adoption with heavy/moderate/non-user cohorts is a universal finding. PHTI 2025 formalizes the three-cohort pattern.'},
-  'CM-24':{c:'emerging', r:'Only 3 papers formally measure ASR accuracy. Commercial vendors do not publish word error rates, an industry opacity problem.'},
-  'CM-25':{c:'converge', r:'Methodological weaknesses (no randomization, no control, self-report reliance) are consistently identified across reviews.'}
+  'CM-24':{c:'emerging', r:'Only 3 papers formally measure ASR accuracy. Commercial vendors do not publish word error rates, an industry opacity problem.'}
 };
 const CONV_LABEL = {
   converge: 'Findings converge', mixed: 'Mixed signals',

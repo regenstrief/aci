@@ -99,7 +99,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
             <div className="cta-card" onClick={() => setTab('measures')}>
               <div className="cta-num">01</div>
               <div className="smallcaps" style={{color:'var(--accent)'}}>Start here</div>
-              <h3 className="sub" style={{marginTop:10, fontSize:26}}>The 25 canonical measures</h3>
+              <h3 className="sub" style={{marginTop:10, fontSize:26}}>The 24 canonical measures</h3>
               <p style={{fontSize:14, color:'var(--ink-3)', marginTop:10, lineHeight:1.5}}>Browse each measure with definitions, instruments, findings, and source papers.</p>
               <div className="cta-arrow">Explore measures →</div>
             </div>
@@ -800,10 +800,10 @@ function RigorTab({ measures, articles }) {
 
   /* Sort within each tier by paper count descending */
   const tierDefs = [
-    { key:'HIGH',     title:'Best relative quality',  desc:'Multiple study designs, validated instruments, reproducible findings.' },
-    { key:'MODERATE', title:'Moderate',                desc:'Some methodological strength but gaps in design, sample, or convergence.' },
-    { key:'LOW',      title:'Needs work',              desc:'Few studies, weak designs, or findings that diverge across methods.' },
-    { key:'META',     title:'Methodological / Meta',   desc:'Measures that assess research quality rather than clinical outcomes.' }
+    { key:'HIGH',     title:'Multiple study designs, validated instruments, reproducible findings' },
+    { key:'MODERATE', title:'Some methodological strength but gaps in design, sample, or convergence' },
+    { key:'LOW',      title:'Few studies, weak designs, or findings that diverge across methods' },
+    { key:'META',     title:'Measures that assess research quality rather than clinical outcomes' }
   ];
 
   const tierData = {};
@@ -825,7 +825,7 @@ function RigorTab({ measures, articles }) {
         <h1 className="display" style={{fontSize:54, marginTop:8}}>Not all evidence<br/>is <span className="em accent">created equal</span>.</h1>
         <p className="lede" style={{marginTop:16, maxWidth:720}}>
           Each canonical measure draws on a different slice of the {totalPapers}-study corpus.
-          {' '}{highCount} measures have the strongest evidence base; {lowCount} need substantially more work.
+          {' '}{highCount} measures draw on multiple study designs with validated instruments; {lowCount} rest on few studies or weak designs.
           {' '}Findings converge for {convergeCount} measures and actively diverge for {divergeCount}.
         </p>
       </div>
@@ -851,10 +851,10 @@ function RigorTab({ measures, articles }) {
         <div key={t.key} style={{marginBottom:56}}>
           <div style={{borderBottom:'2px solid var(--ink)', paddingBottom:10, marginBottom:8}}>
             <div style={{display:'flex', alignItems:'baseline', justifyContent:'space-between'}}>
-              <h2 className="section" style={{fontSize:28}}>{t.title}</h2>
+              <h2 className="section" style={{fontSize:22}}>{t.title}</h2>
               <span className="smallcaps">{tierData[t.key].length} measure{tierData[t.key].length > 1 ? 's' : ''}</span>
             </div>
-            <p style={{fontSize:14, color:'var(--ink-3)', fontFamily:'Newsreader, serif', fontStyle:'italic', marginTop:4}}>{t.desc}</p>
+
           </div>
 
           <div className="grid-2" style={{marginTop:20}}>
@@ -1224,7 +1224,7 @@ function MethodsTab({ setTab }) {
         <p>The vault contains four directories, each of which contributes to the site:</p>
         <ul>
           <li><code>Articles/</code>, one markdown file per reviewed article</li>
-          <li><code>Canonical Measures/</code>, one file per canonical measure (CM-01 through CM-25)</li>
+          <li><code>Canonical Measures/</code>, one file per canonical measure (CM-01 through CM-24; the former CM-25 now lives in <code>Rigor/</code> as RM-01)</li>
           <li><code>Draft Measures/</code>, one file per draft measure (DM-01 through DM-12)</li>
           <li><code>D&M Dimensions/</code>, one file per dimension</li>
         </ul>
