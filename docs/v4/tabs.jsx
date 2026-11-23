@@ -4,7 +4,7 @@ const { useState: useStateT, useMemo: useMemoT, useEffect: useEffectT } = React;
 /* ========================================================================
    OVERVIEW, hero essay + headline findings + dimension overview
    ======================================================================== */
-function OverviewTab({ articles, measures, draftMeasures, setTab }) {
+function OverviewTab({ articles, measures, draftMeasures, stats, setTab }) {
   const yearCounts = useMemoT(() => {
     const c = {};
     articles.forEach(a => { const y = a.year || 'Unknown'; c[y] = (c[y]||0)+1; });
@@ -12,16 +12,19 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
   }, [articles]);
 
   // Causal-chain order: quality → use → outcomes
-  const dimCounts = useMemoT(() => ({
-    SQ: 3, IQ: 31, SerQ: 12, U: 14, US: 26, II: 40, OI: 33
-  }), []);
+  // Papers contributing at least one measure row to each dimension (dimensions.json)
+  const dimCounts = stats.dimPapers;
+  const dimRanked = Object.entries(dimCounts).sort((a,b) => b[1]-a[1]);
+  const dimTop = dimRanked.slice(0, 2).map(([c]) => c);
+  const dimLow = dimRanked.length ? dimRanked[dimRanked.length-1][0] : '';
+  const canonWords = capFirst(numWords(stats.canonical));
 
   const findings = [
-    { kicker: 'n = 3 / 54', headline: <>Only <em>three</em> randomized trials anchor a literature the size of a regulated drug class.</>, source: 'Afshar 2025b, Lukac 2025, Baker 2023' },
+    { kicker: `n = ${stats.rcts} / ${stats.studies}`, headline: <>Only <em>{numWords(stats.rcts)}</em> randomized {plural(stats.rcts, 'trial anchors', 'trials anchor')} a literature the size of a regulated drug class.</>, source: stats.rctNames },
     { kicker: '71–86%', headline: <>Across every simulation study, <em>omissions</em> dominate the error profile... not hallucinations.</>, source: 'Anderson 2025, Biro 2025, Foo 2025' },
     { kicker: '2–6×', headline: <>Clinicians self-report <em>two to six times</em> more time saved than EHR logs confirm.</>, source: 'Haberle 2024, Ma 2025, Tierney 2025' },
-    { kicker: 'n ≈ 0', headline: <>Real-world <em>patient safety</em> data on ambient AI tools is effectively absent.</>, source: 'CM-19 · 6 papers; mostly simulated or survey-based' },
-    { kicker: 'CM-21', headline: <>Coding accuracy and HCC capture improvements are <em>consistent and validated</em>.</>, source: '6 papers converge' },
+    { kicker: 'n ≈ 0', headline: <>Real-world <em>patient safety</em> data on ambient AI tools is effectively absent.</>, source: `CM-19 · ${stats.cmPapers['CM-19'] ?? 0} papers; mostly simulated or survey-based` },
+    { kicker: 'CM-21', headline: <>Coding accuracy and HCC capture improvements are <em>consistent and validated</em>.</>, source: `${stats.cmPapers['CM-21'] ?? 0} papers converge` },
     { kicker: 'SerQ', headline: <>Implementation evidence is <em>almost entirely qualitative</em>... no validated instruments.</>, source: 'Afshar 2025a, PHTI 2025' }
   ];
 
@@ -40,13 +43,13 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
               clinical <span className="em accent">intelligence</span>.
             </h1>
             <p className="lede" style={{marginTop:24}}>
-              <span className="drop">T</span>wenty-three canonical measures, twelve draft measures pending key-informant validation, and four hundred and ninety-four raw measure rows, distilled from a full-text review of fifty-four studies on the ambient AI scribes now documenting millions of clinical encounters a month.
+              <span className="drop">{canonWords.charAt(0)}</span>{canonWords.slice(1)} canonical measures, {numWords(stats.drafts)} draft measures pending key-informant validation, and {numWords(stats.rawRows)} raw measure rows, distilled from a full-text review of {numWords(stats.studies)} studies on the ambient AI scribes now documenting millions of clinical encounters a month.
             </p>
           </div>
           <div className="hero-byline">
             <div>
               <div className="label">Version · Date</div>
-              <div className="val">v.31 · May 2026</div>
+              <div className="val">{SITE_VERSION}</div>
             </div>
             <div>
               <div className="label">Framework</div>
@@ -54,7 +57,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
             </div>
             <div>
               <div className="label">Corpus</div>
-              <div className="val">54 full-text studies, 2021–2026</div>
+              <div className="val">{stats.studies} full-text studies, {stats.yearMin}–{stats.yearMax}</div>
             </div>
             <div>
               <div className="label">Citation</div>
@@ -66,12 +69,12 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
 
       {/* STATS STRIP */}
       <div className="stats-strip">
-        <div className="stat-cell"><div className="num">{articles.length}</div><div className="label">Studies reviewed</div></div>
-        <div className="stat-cell"><div className="num">494</div><div className="label">Raw measures extracted</div></div>
-        <div className="stat-cell"><div className="num">{measures.length}</div><div className="label">Canonical measures</div></div>
-        <div className="stat-cell"><div className="num">{draftMeasures.length}</div><div className="label">Draft measures</div></div>
-        <div className="stat-cell"><div className="num">7</div><div className="label">D&M dimensions</div></div>
-        <div className="stat-cell"><div className="num">3</div><div className="label">Randomized trials</div></div>
+        <div className="stat-cell"><div className="num">{stats.studies}</div><div className="label">Studies reviewed</div></div>
+        <div className="stat-cell"><div className="num">{stats.rawRows}</div><div className="label">Raw measures extracted</div></div>
+        <div className="stat-cell"><div className="num">{stats.canonical}</div><div className="label">Canonical measures</div></div>
+        <div className="stat-cell"><div className="num">{stats.drafts}</div><div className="label">Draft measures</div></div>
+        <div className="stat-cell"><div className="num">{stats.dims}</div><div className="label">D&M dimensions</div></div>
+        <div className="stat-cell"><div className="num">{stats.rcts}</div><div className="label">Randomized trials</div></div>
       </div>
 
       <div className="page">
@@ -81,8 +84,8 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
             <p style={{fontSize:18, color:'var(--ink)'}}>
               Ambient clinical intelligence... AI that listens to a clinical conversation and writes the note, has become one of the fastest-adopted categories in modern healthcare. Yet the published evidence evaluating these tools remains <em>fragmented, heterogeneous, and methodologically uneven</em>.
             </p>
-            <p>This review takes a bottom-up approach. Rather than impose an a priori taxonomy, every outcome measure was extracted verbatim from each study's methods section, clustered into conceptually distinct constructs, and mapped to one of seven dimensions from the DeLone & McLean Information Systems Success Model. The result is a twenty-three-measure vocabulary for comparing results across an otherwise incoherent body of work.</p>
-            <p>The <em>draft measures</em>, the second product of this review, emerge from a different source. Through key-informant interviews with health-system decision-makers, twelve additional constructs surfaced as important to CFO, CMIO, COO, and CPO audiences but are effectively absent from the published literature. They are named here not as validated measures but as a research agenda.</p>
+            <p>This review takes a bottom-up approach. Rather than impose an a priori taxonomy, every outcome measure was extracted verbatim from each study's methods section, clustered into conceptually distinct constructs, and mapped to one of {numWords(stats.dims)} dimensions from the DeLone & McLean Information Systems Success Model. The result is a {numWords(stats.canonical)}-measure vocabulary for comparing results across an otherwise incoherent body of work.</p>
+            <p>The <em>draft measures</em>, the second product of this review, emerge from a different source. Through key-informant interviews with health-system decision-makers, {numWords(stats.drafts)} additional constructs surfaced as important to CFO, CMIO, COO, and CPO audiences but are effectively absent from the published literature. They are named here not as validated measures but as a research agenda.</p>
           </div>
           <aside className="aside">
             This emerging new digital health product category would benefit from increased evaluation rigor and standardization. Regenstrief seeks to contribute as a neutral ally familiar with digital health evaluation.
@@ -99,14 +102,14 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
             <div className="cta-card" onClick={() => setTab('measures')}>
               <div className="cta-num">01</div>
               <div className="smallcaps" style={{color:'var(--accent)'}}>Start here</div>
-              <h3 className="sub" style={{marginTop:10, fontSize:26}}>The 23 canonical measures</h3>
+              <h3 className="sub" style={{marginTop:10, fontSize:26}}>The {stats.canonical} canonical measures</h3>
               <p style={{fontSize:14, color:'var(--ink-3)', marginTop:10, lineHeight:1.5}}>Browse each measure with definitions, instruments, findings, and source papers.</p>
               <div className="cta-arrow">Explore measures →</div>
             </div>
             <div className="cta-card" onClick={() => setTab('drafts')}>
               <div className="cta-num">02</div>
               <div className="smallcaps" style={{color:'var(--accent)'}}>Research agenda</div>
-              <h3 className="sub" style={{marginTop:10, fontSize:26}}>The 12 draft measures</h3>
+              <h3 className="sub" style={{marginTop:10, fontSize:26}}>The {stats.drafts} draft measures</h3>
               <p style={{fontSize:14, color:'var(--ink-3)', marginTop:10, lineHeight:1.5}}>Constructs health-system leaders care about that the literature does not yet cover.</p>
               <div className="cta-arrow">See the gaps →</div>
             </div>
@@ -155,13 +158,13 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
           </div>
           <div>
             <h4 className="mini">Figure 2 · Evidence density by dimension</h4>
-            <h3 className="sub"><em>Individual and Organizational Impact dominate; the upstream quality dimensions are thin.</em></h3>
+            <h3 className="sub"><em>{dimTop.map(c => DIM_LONG[c]).join(' and ')} lead; {DIM_LONG[dimLow]} is the thinnest.</em></h3>
             <div style={{marginTop:24}}>
               {Object.entries(dimCounts).map(([code, n]) => (
                 <div key={code} style={{display:'grid', gridTemplateColumns:'60px 1fr 40px', gap:12, alignItems:'center', padding:'10px 0', borderBottom:'1px solid var(--rule)'}}>
                   <div><DimTag code={code}/></div>
                   <div style={{height:10, background:'var(--paper-2)', position:'relative'}}>
-                    <div style={{width:(n/maxDim)*100+'%', height:'100%', background:`var(--${(code === 'II' || code === 'OI') ? 'accent' : 'ink'})`}}/>
+                    <div style={{width:(n/maxDim)*100+'%', height:'100%', background:`var(--${dimTop.includes(code) ? 'accent' : 'ink'})`}}/>
                   </div>
                   <div className="mono" style={{fontSize:13, textAlign:'right', color:'var(--ink-2)'}}>{n}</div>
                 </div>
@@ -178,7 +181,7 @@ function OverviewTab({ articles, measures, draftMeasures, setTab }) {
 /* ========================================================================
    MEASURES, canonical list with inline expand
    ======================================================================== */
-function MeasuresTab({ measures, expanded, setExpanded, articles, onSelectArticle }) {
+function MeasuresTab({ stats, measures, expanded, setExpanded, articles, onSelectArticle }) {
   const [q, setQ] = useStateT('');
   const [dim, setDim] = useStateT('');
 
@@ -205,8 +208,8 @@ function MeasuresTab({ measures, expanded, setExpanded, articles, onSelectArticl
     <div className="page">
       <div style={{marginBottom:32}}>
         <div className="smallcaps">II · Canonical Measures</div>
-        <h1 className="display" style={{fontSize:54, marginTop:8}}>Twenty-three constructs,<br/><span className="em">derived from the data</span>.</h1>
-        <p className="lede" style={{marginTop:16, maxWidth:720}}>Clustered bottom-up from 494 raw measure rows across 54 papers. Each measure is grounded in the instruments and findings that researchers actually used.</p>
+        <h1 className="display" style={{fontSize:54, marginTop:8}}>{capFirst(numWords(stats.canonical))} constructs,<br/><span className="em">derived from the data</span>.</h1>
+        <p className="lede" style={{marginTop:16, maxWidth:720}}>Clustered bottom-up from {stats.rawRows} raw measure rows across {stats.studies} papers. Each measure is grounded in the instruments and findings that researchers actually used.</p>
       </div>
 
       {/* FILTERS */}
@@ -722,7 +725,7 @@ function FrameworkTab({ dimensions, measures, articles }) {
 /* ========================================================================
    CORPUS, statistics
    ======================================================================== */
-function CorpusTab({ articles }) {
+function CorpusTab({ articles, stats }) {
   const designData = useMemoT(() => {
     const c = {};
     articles.forEach(a => { const d = a.studyDesign || 'Unknown'; c[d] = (c[d]||0)+1; });
@@ -743,7 +746,7 @@ function CorpusTab({ articles }) {
       <div style={{marginBottom:32}}>
         <div className="smallcaps">VII · Study Corpus</div>
         <h1 className="display" style={{fontSize:54, marginTop:8}}>The <span className="em">shape</span> of the evidence.</h1>
-        <p className="lede" style={{marginTop:16, maxWidth:720}}>Two thousand and twenty-one to today. North-America-dominant. Three randomized trials.</p>
+        <p className="lede" style={{marginTop:16, maxWidth:720}}>{stats.yearMin} to today. North-America-dominant. {capFirst(numWords(stats.rcts))} randomized {plural(stats.rcts, 'trial', 'trials')}.</p>
       </div>
 
       <div className="grid-2" style={{marginBottom:48}}>
@@ -946,7 +949,7 @@ function RigorTab({ measures, articles }) {
    METHODS, sectioned methodology page (accordion)
    ======================================================================== */
 
-const REPO_BASE = 'https://github.com/pbiondich/aci/blob/main';
+const REPO_BASE = 'https://github.com/regenstrief/aci/blob/main';
 
 function AccordionSection({ num, title, sub, defaultOpen, children }) {
   const [open, setOpen] = useStateT(!!defaultOpen);
@@ -965,20 +968,20 @@ function AccordionSection({ num, title, sub, defaultOpen, children }) {
   );
 }
 
-function MethodsTab({ setTab }) {
+function MethodsTab({ setTab, stats }) {
   return (
     <div className="page">
       <div style={{marginBottom:32}}>
         <div className="smallcaps">IX · Methods</div>
         <h1 className="display" style={{fontSize:54, marginTop:8}}>How this <span className="em accent">review</span><br/>was built.</h1>
         <p className="lede" style={{marginTop:16, maxWidth:760}}>
-          A note on procedure. The taxonomy on this site did not arrive fully formed; it was assembled from fifty-four full-text reviews, four hundred ninety-four extracted measures, and a series of editorial judgments documented here for the reader who wants to inspect the seams.
+          A note on procedure. The taxonomy on this site did not arrive fully formed; it was assembled from {numWords(stats.studies)} full-text reviews, {numWords(stats.rawRows)} extracted measures, and a series of editorial judgments documented here for the reader who wants to inspect the seams.
         </p>
       </div>
 
       <div className="grid-feature" style={{marginBottom:48}}>
         <div className="body-text">
-          <p>The sections below describe, in order, the <em>corpus</em> we read, the <em>template</em> we used to abstract each paper, the <em>framework</em> we mapped measures into, the <em>derivation</em> that produced the twenty-three canonical measures, and the <em>tooling</em> that keeps it all reproducible.</p>
+          <p>The sections below describe, in order, the <em>corpus</em> we read, the <em>template</em> we used to abstract each paper, the <em>framework</em> we mapped measures into, the <em>derivation</em> that produced the {numWords(stats.canonical)} canonical measures, and the <em>tooling</em> that keeps it all reproducible.</p>
           <p>Where a procedure required a judgment call, we have tried to name it. Where a methodology document lives in the source repository, it is linked.</p>
         </div>
         <aside className="aside">
@@ -993,7 +996,7 @@ function MethodsTab({ setTab }) {
         sub="Fifty-four full-text studies, full-text rule, and a rolling inclusion process."
         defaultOpen={true}
       >
-        <p>The review is built on a corpus of <strong>54 articles</strong> evaluating ambient clinical intelligence tools, drawn from peer-reviewed journals, preprint servers, professional society reports, and grey literature published between 2021 and 2026. Each article was reviewed in full text by a member of the team using a structured abstraction template.</p>
+        <p>The review is built on a corpus of <strong>{stats.studies} articles</strong> evaluating ambient clinical intelligence tools, drawn from peer-reviewed journals, preprint servers, professional society reports, and grey literature published between {stats.yearMin} and {stats.yearMax}. Each article was reviewed in full text by a member of the team using a structured abstraction template.</p>
 
         <h4>Inclusion rule: full text only</h4>
         <p>The hard rule of the project is that no article enters the corpus on the basis of its abstract alone. If the full text is inaccessible, the paper is flagged for procurement and held outside the corpus until obtained. This rule exists because the abstract of an ambient AI study almost never reports the constructs we are trying to extract, measure operationalization, instrument choice, and dimension mapping all live in the methods section.</p>
@@ -1051,7 +1054,7 @@ function MethodsTab({ setTab }) {
 
         <h4>The Study Measures table</h4>
         <p>For each measure a paper reports, we capture three columns: the <em>name</em> as it appears in the paper, a <em>description</em> of ≤50 words, and the <em>D&M dimension(s)</em> we believe it belongs to. A measure may be tagged with more than one dimension when its construct legitimately spans them, see the mapping guide for dual-coding rules.</p>
-        <p>Across all 54 articles, this process produced <strong>494 raw measure rows</strong>, which became the input to the canonical-measure derivation described in §4.</p>
+        <p>Across all {stats.studies} articles, this process produced <strong>{stats.rawRows} raw measure rows</strong>, which became the input to the canonical-measure derivation described in §4.</p>
 
         <p style={{marginTop:18, fontSize:14}}>
           <a href={`${REPO_BASE}/Templates/Article Review Template.md`} target="_blank" rel="noopener" className="ext">Read the full Article Review Template on GitHub →</a>
@@ -1102,14 +1105,14 @@ function MethodsTab({ setTab }) {
       <AccordionSection
         num="4"
         title="Deriving the canonical measures"
-        sub="Four hundred ninety-four raw rows, twenty-three canonical constructs, bottom-up."
+        sub={`${capFirst(numWords(stats.rawRows))} raw rows, ${numWords(stats.canonical)} canonical constructs, bottom-up.`}
       >
-        <p>The most distinctive aspect of this review is that the canonical-measure taxonomy was <em>derived from the data, not imposed on it</em>. Earlier in the project, we worked with eleven seeded measures inherited from prior literature reviews. Those were discarded in March 2026 in favor of an evidence-grounded set built bottom-up from the 494 raw measure rows in the corpus.</p>
+        <p>The most distinctive aspect of this review is that the canonical-measure taxonomy was <em>derived from the data, not imposed on it</em>. Earlier in the project, we worked with eleven seeded measures inherited from prior literature reviews. Those were discarded in March 2026 in favor of an evidence-grounded set built bottom-up from the {stats.rawRows} raw measure rows in the corpus.</p>
 
         <div className="flow-diagram">
-          <div className="flow-cell"><div className="lbl">Step 1 · Extract</div><div className="val">494 raw rows</div></div>
-          <div className="flow-cell"><div className="lbl">Step 2 · Cluster</div><div className="val">25 constructs</div></div>
-          <div className="flow-cell"><div className="lbl">Step 3 · Document</div><div className="val">25 CM files</div></div>
+          <div className="flow-cell"><div className="lbl">Step 1 · Extract</div><div className="val">{stats.rawRows} raw rows</div></div>
+          <div className="flow-cell"><div className="lbl">Step 2 · Cluster</div><div className="val">{stats.canonical} constructs</div></div>
+          <div className="flow-cell"><div className="lbl">Step 3 · Document</div><div className="val">{stats.canonical} CM files</div></div>
           <div className="flow-cell"><div className="lbl">Step 4 · Validate</div><div className="val">Linkage check</div></div>
         </div>
 
@@ -1252,7 +1255,7 @@ function MethodsTab({ setTab }) {
 
         <h4>Citation</h4>
         <div style={{padding:'14px 18px', borderLeft:'3px solid var(--accent)', background:'var(--brand-soft)', margin:'10px 0 14px', fontFamily:'Newsreader, serif', fontSize:15, fontStyle:'italic', color:'var(--ink-2)', lineHeight:1.55}}>
-          Biondich, P., Vest, J., Allen, K., Amlung, J., &amp; Thomas, J. (2026). <em>Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone &amp; McLean IS Success Model.</em> Available at: https://pbiondich.github.io/aci/v3/
+          Biondich, P., Vest, J., Allen, K., Amlung, J., &amp; Thomas, J. (2026). <em>Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone &amp; McLean IS Success Model.</em> Available at: https://regenstrief.github.io/aci/v4/
         </div>
 
         <h4>Authors</h4>
@@ -1265,7 +1268,7 @@ function MethodsTab({ setTab }) {
         </div>
 
         <p style={{marginTop:18, fontSize:14, display:'flex', gap:18, flexWrap:'wrap'}}>
-          <a href="https://github.com/pbiondich/aci" target="_blank" rel="noopener" className="ext">Repository on GitHub →</a>
+          <a href="https://github.com/regenstrief/aci" target="_blank" rel="noopener" className="ext">Repository on GitHub →</a>
           <a href={`${REPO_BASE}/README.md`} target="_blank" rel="noopener" className="ext">README</a>
           <a href={`${REPO_BASE}/LICENSE`} target="_blank" rel="noopener" className="ext">License (CC BY-SA 4.0)</a>
         </p>

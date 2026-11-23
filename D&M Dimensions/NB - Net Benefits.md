@@ -18,4 +18,4 @@ See [[II - Individual Impact]] and [[OI - Organizational Impact]] for the curren
 ---
 *D&M Dimensions | ACI Evidence Review Vault | Created 2026-03-25, updated 2026-04-15, split 2026-05-05*
 
-*Licensed under [CC BY-SA 4.0](../LICENSE) — [github.com/pbiondich/aci](https://github.com/pbiondich/aci)*
+*Licensed under [CC BY-SA 4.0](../LICENSE) — [github.com/regenstrief/aci](https://github.com/regenstrief/aci)*

@@ -38,18 +38,18 @@ Not a study — policy synthesis and early adopter learnings report. Central que
 
 Not a primary research study. Instead, PHTI developed an Evidence Assessment Framework (Exhibit 1):
 
-| Impact Area | Example Metrics | PHTI Assessment |
+| Measure | Description | D&M Dimension(s) |
 |---|---|---|
-| Clinician attrition | Retention rates | ⬜ Too early to conclude |
-| Burnout | Validated burnout instruments | ✅ Emerging evidence of positive impact |
-| Clinician experience | Satisfaction surveys | ⚠️ Mixed feedback |
-| Clinician time saved | Documentation time (UAL, self-report) | ⚠️ Mixed feedback |
-| Cognitive load | NASA-TLX, validated instruments | ✅ Emerging evidence of positive impact |
-| Pajama time (after-hours) | After-hours EHR time | ⚠️ Mixed feedback |
-| Note quality | PDQI-9, simulation error rate | ✅ Positive with human in the loop |
-| Patient experience | Patient satisfaction, PDRQ | ✅ Emerging evidence of positive impact |
-| Patient encounters per period | Visit volume | ⚠️ Mixed feedback |
-| Coding accuracy | HCC capture, E/M level changes | ⬜ Too early to conclude |
+| Clinician attrition | Example metrics: retention rates. PHTI assessment: ⬜ Too early to conclude. | [[OI - Organizational Impact]] |
+| Burnout | Example metrics: validated burnout instruments. PHTI assessment: ✅ Emerging evidence of positive impact. | [[II - Individual Impact]] |
+| Clinician experience | Example metrics: satisfaction surveys. PHTI assessment: ⚠️ Mixed feedback. | [[US - User Satisfaction]] |
+| Clinician time saved | Example metrics: documentation time (UAL, self-report). PHTI assessment: ⚠️ Mixed feedback. | [[II - Individual Impact]] |
+| Cognitive load | Example metrics: NASA-TLX, validated instruments. PHTI assessment: ✅ Emerging evidence of positive impact. | [[II - Individual Impact]] |
+| Pajama time (after-hours) | Example metrics: after-hours EHR time. PHTI assessment: ⚠️ Mixed feedback. | [[II - Individual Impact]] |
+| Note quality | Example metrics: PDQI-9, simulation error rate. PHTI assessment: ✅ Positive with human in the loop. | [[IQ - Information Quality]] |
+| Patient experience | Example metrics: patient satisfaction, PDRQ. PHTI assessment: ✅ Emerging evidence of positive impact. | [[OI - Organizational Impact]] |
+| Patient encounters per period | Example metrics: visit volume. PHTI assessment: ⚠️ Mixed feedback. | [[OI - Organizational Impact]] |
+| Coding accuracy | Example metrics: HCC capture, E/M level changes. PHTI assessment: ⬜ Too early to conclude. | [[OI - Organizational Impact]] |
 
 ---
 
@@ -109,4 +109,4 @@ PHTI's call for standardized metrics directly aligns with the thesis of this lit
 
 ## License
 
-This file is part of the [ACI Structured Evidence Review](https://github.com/pbiondich/aci), licensed under [CC BY-SA 4.0](../LICENSE). If you extend this work, consider contributing back via a pull request.
+This file is part of the [ACI Structured Evidence Review](https://github.com/regenstrief/aci), licensed under [CC BY-SA 4.0](../LICENSE). If you extend this work, consider contributing back via a pull request.

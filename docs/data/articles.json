@@ -112,11 +112,6 @@
         "measure": "Provider Feedback / User Experience",
         "description": "Qualitative and survey-based assessments of provider satisfaction, usability concerns, and workflow friction. Collected via REDCap; drives iterative PDSA improvement cycles.",
         "dimensions": "US - User Satisfaction, SerQ - Service Quality"
-      },
-      {
-        "measure": "Source: NEJM AI 2025",
-        "description": "DOI: 10.1056/aidbp2401267",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],
@@ -269,11 +264,6 @@
         "measure": "Days of Use as Moderator",
         "description": "No significant effect of number of days using Abridge on post-survey responses. Benefit seen quickly.",
         "dimensions": "(methodological)"
-      },
-      {
-        "measure": "Source: JAMIA Open 2025",
-        "description": "DOI: 10.1093/jamiaopen/ooaf013",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -449,11 +439,6 @@
         "measure": "Inter-rater Reliability (ICC)",
         "description": "Poor agreement on PDQI-9 (ICC 0.1) and overall rating (ICC 0.19).",
         "dimensions": "(methodological)"
-      },
-      {
-        "measure": "Source: JAAOS 2024",
-        "description": "DOI: 10.5435/JAAOS-D-23-00474",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -489,11 +474,6 @@
         "measure": "Clinician Experience",
         "description": "Enhanced experience and reduced task load reported by clinicians (NASA Task Load Index).",
         "dimensions": "US - User Satisfaction"
-      },
-      {
-        "measure": "Source: Future Healthcare Journal 2024",
-        "description": "DOI: 10.1016/j.fhj.2024.100157",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -759,11 +739,6 @@
         "measure": "Simulation Testing Methodology",
         "description": "Rapid evaluation approach using scripted encounters. 11 scripts, 2 teams, 2 products = 44 notes. Alternating order to control for learning effects. Linear mixed-effects model for editing time, ordinal logistic regression for Likert ratings.",
         "dimensions": "(methodological)"
-      },
-      {
-        "measure": "Source: JAMIA 2025",
-        "description": "DOI: 10.1093/jamia/ocaf052",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -969,11 +944,6 @@
         "measure": "Fear of Increased Patient Volume (qualitative)",
         "description": "7/12 physicians worried DAXC efficiency would be used to mandate seeing more patients. \"I do worry that's what this long game is.\" Novel concern not prominently captured in other papers.",
         "dimensions": "US - User Satisfaction, OI - Organizational Impact"
-      },
-      {
-        "measure": "Source: Journal of General Internal Medicine 2024",
-        "description": "DOI: 10.1007/s11606-024-08870-z",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1034,11 +1004,6 @@
         "measure": "Cost Comparison",
         "description": "Monthly software cost $1850 vs. scribe $3050 (including recruiting/training). Potential savings $13,400–$14,400 per scribe replacement.",
         "dimensions": "OI - Organizational Impact"
-      },
-      {
-        "measure": "Source: JAAD International 2024",
-        "description": "DOI: 10.1016/j.jdin.2024.02.009",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1084,11 +1049,6 @@
         "measure": "GPT-4o NLP Extraction (HIPAA-compliant)",
         "description": "GPT-4o used to extract RDoC symptom levels from de-identified notes. Represents a novel outcome measure methodology — LLM-as-evaluator of clinical note content. Accuracy/validation of GPT-4o extraction not reported in abstract.",
         "dimensions": "SQ - System Quality, IQ - Information Quality"
-      },
-      {
-        "measure": "Source: medRxiv preprint May 2025",
-        "description": "DOI: 10.1101/2025.05.14.25327620",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1169,11 +1129,6 @@
         "measure": "Qualitative: Note Quality Concerns",
         "description": "Many negative comments about verbosity, language unnaturalness, inaccuracy, extensive editing burden. \"The amount of time spent checking and correcting the generated text is equal to or exceeds the charting burden experienced without DAX.\"",
         "dimensions": "IQ - Information Quality, SQ - System Quality"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2025",
-        "description": "DOI: 10.1001/jamanetworkopen.2024.60637",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1249,11 +1204,6 @@
         "measure": "AI Scribe Utilization by Task",
         "description": "Used most for initial appointments; least for letters to referrers and patient summaries at both time points. Pattern similar to Ma 2025 (narrative/HPI tasks favored over structured data).",
         "dimensions": "U - Use"
-      },
-      {
-        "measure": "Source: Musculoskeletal Science and Practice 2025",
-        "description": "DOI: 10.1016/j.msksp.2025.103333",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1304,11 +1254,6 @@
         "measure": "Model Types",
         "description": "Neural networks most used (ASR + NLP + medical lexicon + structured output). Reinforcement learning, supervised learning, convolutional neural networks mentioned.",
         "dimensions": "SQ - System Quality"
-      },
-      {
-        "measure": "Source: Artificial Intelligence in Medicine 2023",
-        "description": "DOI: 10.1016/j.artmed.2023.102487",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1419,11 +1364,6 @@
         "measure": "Intention to Use",
         "description": "Post-survey: 29.0% intend to use for majority of notes.",
         "dimensions": "U - Use"
-      },
-      {
-        "measure": "Source: Journal of General Internal Medicine 2024",
-        "description": "DOI: 10.1007/s11606-024-08924-2",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1474,11 +1414,6 @@
         "measure": "Specialty Coverage",
         "description": "Range of clinical specialties represented in evaluation datasets. Found to be minimal — mostly primary care/general medicine, limiting generalizability.",
         "dimensions": "IQ - Information Quality"
-      },
-      {
-        "measure": "Source: medRxiv preprint 2025",
-        "description": "DOI: 10.1101/2025.01.29.25320859",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],
@@ -1524,11 +1459,6 @@
         "measure": "Adoption / Inclusion Rate",
         "description": "124 enrolled; only 42 (34%) met 3-month analysis criteria. Used as a proxy for differential adoption and sustainability of tool use. Not a primary outcome but analytically important.",
         "dimensions": "U - Use"
-      },
-      {
-        "measure": "Source: MEDINFO 2025 (IOS Press)",
-        "description": "DOI: 10.3233/SHTI250921",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1649,11 +1579,6 @@
         "measure": "Qualitative Themes (Table 4)",
         "description": "(1) Positive: streamlined workflow, reduced mental fatigue, enhanced patient focus. (2) Limitations: need specialty-specific customization (neurology exam, psychiatry language, surgical workflows), workflow disruptions (phone vs. workstation, app switching), accuracy/editing burden. (3) Future expectations: AI for inbox management, chart summarization, billing, problem list optimization.",
         "dimensions": "SerQ - Service Quality, U - Use"
-      },
-      {
-        "measure": "Source: JAMIA 2026",
-        "description": "DOI: 10.1093/jamia/ocaf180",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1724,11 +1649,6 @@
         "measure": "Patient Opt-Out Rate",
         "description": "5 patients opted out of  total DAX encounters (0.014%). Very low opt-out rate.",
         "dimensions": "U - Use, OI - Organizational Impact"
-      },
-      {
-        "measure": "Source: JAMIA 2024",
-        "description": "DOI: 10.1093/jamia/ocae022",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1838,11 +1758,6 @@
         "measure": "SEIPS 3.0 Model Assessment",
         "description": "Included studies insufficient for assessing integration into workflows per SEIPS 3.0. Most studies don't examine system/workflow factors.",
         "dimensions": "SerQ - Service Quality, U - Use"
-      },
-      {
-        "measure": "Source: JMIR AI 2025",
-        "description": "DOI: 10.2196/76743",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -1908,11 +1823,6 @@
         "measure": "Time Searching for Information",
         "description": "Most clinicians (10/20) spent 31–60 min per day searching for missing information.",
         "dimensions": "II - Individual Impact"
-      },
-      {
-        "measure": "Source: Acute Medicine 2025",
-        "description": "DOI: 10.52964/AMJA.1007",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2015,11 +1925,6 @@
         "measure": "Unchanged Experience",
         "description": "Majority in both groups reported no change: 44.7% (intervention) vs. 68.7% (control) unchanged. Among DAX users, 55.3% saw no measurable benefit at 5 weeks.",
         "dimensions": "US - User Satisfaction"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2024",
-        "description": "DOI: 10.1001/jamanetworkopen.2024.32460",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2075,11 +1980,6 @@
         "measure": "Adverse Events",
         "description": "One Grade 1 (mild) adverse event reported across entire study period. No serious events.",
         "dimensions": "IQ - Information Quality, OI - Organizational Impact"
-      },
-      {
-        "measure": "Source: medRxiv preprint July 2025",
-        "description": "DOI: 10.1101/2025.07.10.25331333",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2135,11 +2035,6 @@
         "measure": "License Relinquishment",
         "description": "3 of 50 (6%) voluntarily returned their license citing low perceived utility. Used as a proxy for non-adoption/rejection.",
         "dimensions": "U - Use, US - User Satisfaction"
-      },
-      {
-        "measure": "Source: JAMIA 2025",
-        "description": "DOI: 10.1093/jamia/ocae304",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2190,11 +2085,6 @@
         "measure": "Qualitative Feedback (clinician-reported)",
         "description": "Issues with order of statements, repetition, and other structural concerns beyond factual errors.",
         "dimensions": "IQ - Information Quality"
-      },
-      {
-        "measure": "Source: arXiv 2022 / ACL 2022",
-        "description": "DOI: 10.48550/arXiv.2204.00447",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2255,11 +2145,6 @@
         "measure": "Implementation Themes",
         "description": "4 themes: DS use (initially straightforward patients), DS characteristics (complexity/usability), workflow (setup, editing workload, telemedicine integration), implementation process (training materials, unfulfilled training needs).",
         "dimensions": "SerQ - Service Quality, U - Use"
-      },
-      {
-        "measure": "Source: JCO Clinical Cancer Informatics 2023",
-        "description": "DOI: 10.1200/CCI.22.00166",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2305,11 +2190,6 @@
         "measure": "Specialty Subgroup Analysis",
         "description": "Full specialty mix (surgery, OB/gyn, peds, neurology/psychiatry, primary care). One of few studies with surgical specialty representation.",
         "dimensions": "US - User Satisfaction"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2025",
-        "description": "DOI: 10.1001/jamanetworkopen.2025.34976",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2390,11 +2270,6 @@
         "measure": "Implementation Intent (Willingness to Adopt)",
         "description": "Post-study 5-point scale: \"If medimo were introduced, would you use it?\" Significant positive correlation with time reduction (r=0.67, p=0.009). User motivation is a key predictor of achieving time benefits.",
         "dimensions": "U - Use, US - User Satisfaction"
-      },
-      {
-        "measure": "Source: Cureus 2025",
-        "description": "DOI: 10.7759/cureus.81313",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2435,11 +2310,6 @@
         "measure": "Patient Satisfaction — \"More Personable Encounter\" (open-label)",
         "description": "Open-label: patients strongly agreed the encounter felt more personable with DAX.",
         "dimensions": "OI - Organizational Impact, US - User Satisfaction"
-      },
-      {
-        "measure": "Source: Applied Clinical Informatics 2024",
-        "description": "DOI: 10.1055/a-2337-4739",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2530,11 +2400,6 @@
         "measure": "Interrater Agreement (RWG)",
         "description": "Within-group agreement across specialties. High (>0.7) in gen med, OB/gyn, ortho. Moderate in peds and cardiology. Hallucination binary had RWG=0.94.",
         "dimensions": "(methodological)"
-      },
-      {
-        "measure": "Source: Frontiers in Artificial Intelligence 2025",
-        "description": "DOI: 10.3389/frai.2025.1691499",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2585,11 +2450,6 @@
         "measure": "Propensity Score Balance",
         "description": "After weighting, all baseline covariates (sex, years since training, specialty, clinician type, site, Epic proficiency, baseline EHR metrics, appointment volume) were balanced between groups (difference ≈0). Methodological quality measure.",
         "dimensions": "(methodological)"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2025",
-        "description": "DOI: 10.1001/jamanetworkopen.2025.37000",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2610,7 +2470,58 @@
     "dataSources": "Qualitative: AI Taskforce member meetings (health system + AI company executives); one-on-one interviews; synthesis of published peer-reviewed literature; industry data",
     "summary": "PHTI's Market Trend Report on ambient AI scribe adoption, published March 2025. PHTI is an independent nonprofit funded by the Peterson Center on Healthcare; it provides evidence-based evaluations with no vendor funding. The report's AI Taskforce included health system leaders and AI solution companies convened September 2024–early 2025. Key findings: ambient scribes may be the fastest healthcare technology adoption ever (no regulatory mandate required); ~60 products now available; evidence for burnout/cognitive load reduction is \"positive (emerging)\"; evidence for documentation time savings and productivity is \"mixed\"; coding/financial impact is \"too early to conclude.\" The report explicitly flags that HCC/E&M coding extensions may increase healthcare spending even if coding is accurate. Calls for standardized metrics across 3 domains: clinician, patient, and financial.",
     "hypothesis": "Not a study — policy synthesis and early adopter learnings report. Central question: do ambient scribes work, and how should health systems measure their impact?",
-    "measures": [],
+    "measures": [
+      {
+        "measure": "Clinician attrition",
+        "description": "Example metrics: retention rates. PHTI assessment: ⬜ Too early to conclude.",
+        "dimensions": "OI - Organizational Impact"
+      },
+      {
+        "measure": "Burnout",
+        "description": "Example metrics: validated burnout instruments. PHTI assessment: ✅ Emerging evidence of positive impact.",
+        "dimensions": "II - Individual Impact"
+      },
+      {
+        "measure": "Clinician experience",
+        "description": "Example metrics: satisfaction surveys. PHTI assessment: ⚠️ Mixed feedback.",
+        "dimensions": "US - User Satisfaction"
+      },
+      {
+        "measure": "Clinician time saved",
+        "description": "Example metrics: documentation time (UAL, self-report). PHTI assessment: ⚠️ Mixed feedback.",
+        "dimensions": "II - Individual Impact"
+      },
+      {
+        "measure": "Cognitive load",
+        "description": "Example metrics: NASA-TLX, validated instruments. PHTI assessment: ✅ Emerging evidence of positive impact.",
+        "dimensions": "II - Individual Impact"
+      },
+      {
+        "measure": "Pajama time (after-hours)",
+        "description": "Example metrics: after-hours EHR time. PHTI assessment: ⚠️ Mixed feedback.",
+        "dimensions": "II - Individual Impact"
+      },
+      {
+        "measure": "Note quality",
+        "description": "Example metrics: PDQI-9, simulation error rate. PHTI assessment: ✅ Positive with human in the loop.",
+        "dimensions": "IQ - Information Quality"
+      },
+      {
+        "measure": "Patient experience",
+        "description": "Example metrics: patient satisfaction, PDRQ. PHTI assessment: ✅ Emerging evidence of positive impact.",
+        "dimensions": "OI - Organizational Impact"
+      },
+      {
+        "measure": "Patient encounters per period",
+        "description": "Example metrics: visit volume. PHTI assessment: ⚠️ Mixed feedback.",
+        "dimensions": "OI - Organizational Impact"
+      },
+      {
+        "measure": "Coding accuracy",
+        "description": "Example metrics: HCC capture, E/M level changes. PHTI assessment: ⬜ Too early to conclude.",
+        "dimensions": "OI - Organizational Impact"
+      }
+    ],
     "keyFindings": [
       "~60 ambient scribes currently available/being implemented",
       "Ambient scribes are \"one of the fastest technology adoptions in healthcare history\" — no regulatory mandate required",
@@ -2705,11 +2616,6 @@
         "measure": "Qualitative — Workflow Impacts",
         "description": "Major theme: delayed encounter closing, inefficiencies; also positive impacts — more time for patients, improved burnout perception.",
         "dimensions": "II - Individual Impact, US - User Satisfaction"
-      },
-      {
-        "measure": "Source: Journal of General Internal Medicine 2025",
-        "description": "DOI: 10.1007/s11606-025-09771-5",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2824,11 +2730,6 @@
         "measure": "Utilization Stratification",
         "description": "Physicians grouped by self-reported usage level (high vs. medium). Used to explore whether adoption intensity correlates with attitude and outcome patterns.",
         "dimensions": "U - Use"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2025",
-        "description": "DOI: 10.1001/jamanetworkopen.2025.1904",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],
@@ -2919,11 +2820,6 @@
         "measure": "Physician Satisfaction Percentile (ED)",
         "description": "ED physician satisfaction percentile improved from 66% to 81% post-scribe (+15pp).",
         "dimensions": "US - User Satisfaction"
-      },
-      {
-        "measure": "Source: Health Informatics Journal 2021",
-        "description": "DOI: 10.1177/1460458217692930",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -2989,11 +2885,6 @@
         "measure": "Undivided Attention to Patients",
         "description": "Survey item: proportion agreeing they can give patients undivided attention. Increased from 57.9% to 93.0% (p<.001).",
         "dimensions": "US - User Satisfaction, II - Individual Impact"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2025",
-        "description": "DOI: 10.1001/jamanetworkopen.2025.8614",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -3149,11 +3040,6 @@
         "measure": "Patient Feedback",
         "description": "Early assessments positive — some describe improved interaction with physicians.",
         "dimensions": "OI - Organizational Impact"
-      },
-      {
-        "measure": "Source: NEJM Catalyst 2024",
-        "description": "DOI: 10.1056/CAT.23.0404",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -3341,11 +3227,6 @@
         "measure": "Qualitative Feedback",
         "description": "Issues with order of statements, repetition, and other structural concerns beyond factual errors.",
         "dimensions": "IQ - Information Quality"
-      },
-      {
-        "measure": "Source: arXiv 2022 / ACL 2022",
-        "description": "DOI: 10.48550/arXiv.2204.00447",
-        "dimensions": "Template v2.0"
       }
     ],
     "keyFindings": [],
@@ -3406,11 +3287,6 @@
         "measure": "New Medication Capture",
         "description": "Specific sub-metric tracking whether newly prescribed or discussed medications are accurately documented in the note. Identified as a particular weakness.",
         "dimensions": "IQ - Information Quality"
-      },
-      {
-        "measure": "Source: npj Digital Medicine 2025",
-        "description": "DOI: 10.1038/s41746-025-01622-1",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],
@@ -3466,11 +3342,6 @@
         "measure": "Sentiment Distribution",
         "description": "Automated sentiment analysis of free-text responses, classified as positive, negative, or mixed — used to characterize the aggregate emotional valence of early adoption.",
         "dimensions": "US - User Satisfaction"
-      },
-      {
-        "measure": "Source: IntechOpen 2025",
-        "description": "DOI: 10.5772/intechopen.1011340",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],
@@ -3521,11 +3392,6 @@
         "measure": "Specialty-Specific Variation",
         "description": "Analysis of outcomes stratified by specialty category — surgical, primary care, medical subspecialty — to identify differential effects of ambient technology.",
         "dimensions": "US - User Satisfaction, II - Individual Impact"
-      },
-      {
-        "measure": "Source: JAMA Network Open 2025",
-        "description": "DOI: 10.1001/jamanetworkopen.2025.28056",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],
@@ -3633,11 +3499,6 @@
         "measure": "User Satisfaction / Perceived Usefulness",
         "description": "Student-reported perceptions of the digital scribe's ease of use and utility, captured via post-study survey.",
         "dimensions": "US - User Satisfaction"
-      },
-      {
-        "measure": "Source: JMIR AI 2024",
-        "description": "DOI: 10.2196/60020",
-        "dimensions": ""
       }
     ],
     "keyFindings": [],

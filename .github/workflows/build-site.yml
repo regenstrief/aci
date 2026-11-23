@@ -13,6 +13,7 @@ on:
       - 'scripts/**'
       - 'docs/index.html'
       - 'docs/v3/**'
+      - 'docs/v4/**'
 
   # Allow manual trigger from Actions tab
   workflow_dispatch:

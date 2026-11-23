@@ -105,7 +105,10 @@ function extractTable(content, sectionHeading) {
   const rows = [];
   for (let i = separatorIdx + 1; i < lines.length; i++) {
     const line = lines[i].trim();
-    if (!line || !line.includes('|')) continue;
+    // A markdown table ends at the first line that isn't a table row. Without
+    // this, later pipe-delimited text in the section (e.g. the "*Reviewed by
+    // ... | Source: ... | Template v2.0 ...*" footer) was parsed as a row.
+    if (!line.startsWith('|')) break;
     const cells = line
       .split('|')
       .map(c => c.trim())
@@ -435,10 +438,13 @@ function main() {
   // Dimensions
   const dimensions = parseDimensions();
   dimensions.forEach(dim => {
+    // Match the dimension code as a whole token. A plain substring check let
+    // "U" (Use) match every "US - User Satisfaction" tag.
+    const codeRe = new RegExp(`(?<![A-Za-z])${dim.code}(?![A-Za-z])`);
     let count = 0;
     for (const a of articles) {
       for (const m of a.measures) {
-        if (m.dimensions && m.dimensions.includes(dim.code)) { count++; break; }
+        if (m.dimensions && codeRe.test(m.dimensions)) { count++; break; }
       }
     }
     dim.paperCount = count;

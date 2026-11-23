@@ -86,4 +86,4 @@ Individual Impact captures the effect of the ACI system on the individual clinic
 *D&M Dimensions | ACI Evidence Review Vault | Created 2026-05-05*
 *Restores DeLone & McLean (1992) Individual Impact; previously collapsed into NB per 2003 update*
 
-*Licensed under [CC BY-SA 4.0](../LICENSE) — [github.com/pbiondich/aci](https://github.com/pbiondich/aci)*
+*Licensed under [CC BY-SA 4.0](../LICENSE) — [github.com/regenstrief/aci](https://github.com/regenstrief/aci)*

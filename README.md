@@ -1,6 +1,6 @@
 # Evaluating Ambient Clinical Intelligence: A Structured Evidence Review...
 
-A systematic literature review of 54 studies evaluating Ambient Clinical Intelligence (ACI) tools, organized using the DeLone & McLean Information Systems Success Model. The review synthesizes 494 raw measure rows into 25 canonical measures across six evaluation dimensions, with an interactive web application for exploring the evidence.
+A systematic literature review of 54 studies evaluating Ambient Clinical Intelligence (ACI) tools, organized using the DeLone & McLean Information Systems Success Model. The review synthesizes 456 raw measure rows into 23 canonical measures across seven evaluation dimensions, with an interactive web application for exploring the evidence.
 
 **Live site:** [regenstrief.github.io/aci/v4](https://regenstrief.github.io/aci/v4/)
 
@@ -8,20 +8,21 @@ A systematic literature review of 54 studies evaluating Ambient Clinical Intelli
 
 ACI tools use artificial intelligence to listen to clinical encounters and automatically generate documentation. As adoption accelerates, the evidence base remains fragmented across heterogeneous study designs, inconsistent terminology, and varying outcome measures.
 
-This project addresses that challenge by extracting and normalizing outcome measures from the published literature into a structured, navigable framework. The 25 canonical measures were derived bottom-up from the raw study data rather than imposed top-down, ensuring the taxonomy reflects what researchers actually measure.
+This project addresses that challenge by extracting and normalizing outcome measures from the published literature into a structured, navigable framework. The 23 canonical measures were derived bottom-up from the raw study data rather than imposed top-down, ensuring the taxonomy reflects what researchers actually measure.
 
 The review also includes 12 draft measures identified through stakeholder gap analysis, representing constructs important to health system decision-makers (CFO, CMIO, COO, CPO) that lack sufficient coverage in the current literature. These are pending validation through key informant interviews.
 
 ## Methodology
 
-The DeLone & McLean IS Success Model provides the organizing framework, with six dimensions:
+The DeLone & McLean IS Success Model provides the organizing framework. Following the original 1992 form of the model, Net Benefits is split into individual and organizational impact, yielding seven dimensions:
 
 - **System Quality (SQ)** : reliability, accuracy, and latency of the ACI tool
 - **Information Quality (IQ)** : accuracy and completeness of generated notes
 - **Service Quality (SerQ)** : support, onboarding, and integration
 - **Use (U)** : adoption, utilization, and frequency of use
 - **User Satisfaction (US)** : provider experience, perceived usefulness, burnout impact
-- **Net Benefits (NB)** : efficiency gains, financial outcomes, patient safety
+- **Individual Impact (II)** : effects on the clinician, such as documentation time, burnout, and cognitive load
+- **Organizational Impact (OI)** : effects on the organization and its patients, such as financial outcomes, throughput, and patient safety
 
 Each of the 54 articles was reviewed in full text and its outcome measures extracted, tagged with D&M dimensions, and clustered into canonical constructs. The derivation methodology, including a linkage validation process, is documented in `Templates/Canonical Measure Derivation Methodology.md`.
 
@@ -29,16 +30,17 @@ Each of the 54 articles was reviewed in full text and its outcome measures extra
 
 ```
 ├── Articles/                        # 54 article review files (markdown)
-├── Canonical Measures/              # 25 canonical measure definitions
+├── Canonical Measures/              # 23 canonical measure definitions
 ├── Draft Measures/                  # 12 draft measures (pending validation)
-├── D&M Dimensions/                  # 6 dimension overview files
+├── D&M Dimensions/                  # 7 dimension overview files
 ├── Templates/                       # Article review template, methodology docs
 ├── scripts/
 │   ├── extract-data.js              # Extracts vault markdown → JSON for webapp
 │   └── link-article.js              # Validates article-to-measure linkage
 ├── docs/
-│   ├── index.html                   # Classic webapp (single file, v1)
-│   ├── v3/                          # Current webapp (multi-file JSX + Babel)
+│   ├── index.html                   # Redirects the site root to the current version
+│   ├── v3/                          # Previous webapp version
+│   ├── v4/                          # Current webapp (multi-file JSX + Babel)
 │   │   ├── index.html               # Shell: styles, fonts, Babel transpiler
 │   │   ├── components.jsx           # Shared components and helpers
 │   │   ├── tabs.jsx                 # Tab views (Overview through Rigor)
@@ -56,10 +58,10 @@ Each of the 54 articles was reviewed in full text and its outcome measures extra
 
 ## Web Application
 
-The interactive webapp at [pbiondich.github.io/aci/v4](https://pbiondich.github.io/aci/v4/) provides eight views:
+The interactive webapp at [regenstrief.github.io/aci/v4](https://regenstrief.github.io/aci/v4/) provides eight views:
 
 1. **Overview** : key findings at a glance
-2. **Canonical Measures** : detailed definitions, findings, and paper lists for all 25 measures
+2. **Canonical Measures** : detailed definitions, findings, and paper lists for all 23 measures
 3. **Decision Guide** : stakeholder-filtered view (CMIO, CFO, COO, CPO) with evidence strength indicators
 4. **Draft Measures** : proposed measures pending key informant validation
 5. **Article Explorer** : searchable table of all 54 studies with detail modals
@@ -67,11 +69,13 @@ The interactive webapp at [pbiondich.github.io/aci/v4](https://pbiondich.github.
 7. **Study Corpus** : corpus-wide statistics and distributions
 8. **Level of Rigor** : tiered quality assessment (work in progress)
 
-Tabs are shareable via URL hash (e.g., `pbiondich.github.io/aci/v3/#guide`).
+Tabs are shareable via URL hash (e.g., `regenstrief.github.io/aci/v4/#guide`).
 
 ### Architecture
 
-The webapp uses a zero-build-step architecture: an HTML shell with separate JSX component files transpiled at load time by Babel Standalone, React 18.3.1 via CDN, and static JSON data files. No npm, no webpack, no local build tooling. The classic v1 single-file version remains available at [pbiondich.github.io/aci](https://pbiondich.github.io/aci/).
+The webapp uses a zero-build-step architecture: an HTML shell with separate JSX component files transpiled at load time by Babel Standalone, React 18.3.1 via CDN, and static JSON data files. No npm, no webpack, no local build tooling. The site root, [regenstrief.github.io/aci](https://regenstrief.github.io/aci/), redirects to the current version.
+
+Every count the site displays (studies, raw measure rows, canonical and draft measures, dimensions, randomized trials, papers per dimension) is computed in the browser from the JSON in `docs/data/`, via `computeStats` in `docs/v4/components.jsx`. Do not type counts into page text.
 
 ## Local Setup
 
@@ -114,7 +118,7 @@ This is an active research project. If you're interested in contributing article
 
 If referencing this work, please cite as:
 
-> Biondich, P. et al. (2026). Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone & McLean IS Success Model. Available at: https://pbiondich.github.io/aci/v3/
+> Biondich, P. et al. (2026). Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone & McLean IS Success Model. Available at: https://regenstrief.github.io/aci/v4/
 
 ## License
 
