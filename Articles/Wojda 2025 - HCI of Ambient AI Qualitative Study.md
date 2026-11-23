@@ -53,4 +53,4 @@ Not explicitly stated. Study is exploratory/inductive; aims to generate hypothes
 
 ## License
 
-This file is part of the [ACI Structured Evidence Review](https://github.com/pbiondich/aci), licensed under [CC BY-SA 4.0](../LICENSE). If you extend this work, consider contributing back via a pull request.
+This file is part of the [ACI Structured Evidence Review](https://github.com/regenstrief/aci), licensed under [CC BY-SA 4.0](../LICENSE). If you extend this work, consider contributing back via a pull request.

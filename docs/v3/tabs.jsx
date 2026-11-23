@@ -946,7 +946,7 @@ function RigorTab({ measures, articles }) {
    METHODS, sectioned methodology page (accordion)
    ======================================================================== */
 
-const REPO_BASE = 'https://github.com/pbiondich/aci/blob/main';
+const REPO_BASE = 'https://github.com/regenstrief/aci/blob/main';
 
 function AccordionSection({ num, title, sub, defaultOpen, children }) {
   const [open, setOpen] = useStateT(!!defaultOpen);
@@ -1253,7 +1253,7 @@ function MethodsTab({ setTab }) {
 
         <h4>Citation</h4>
         <div style={{padding:'14px 18px', borderLeft:'3px solid var(--accent)', background:'#faf6ea', margin:'10px 0 14px', fontFamily:'Newsreader, serif', fontSize:15, fontStyle:'italic', color:'var(--ink-2)', lineHeight:1.55}}>
-          Biondich, P., Vest, J., Allen, K., Amlung, J., &amp; Thomas, J. (2026). <em>Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone &amp; McLean IS Success Model.</em> Available at: https://pbiondich.github.io/aci/v3/
+          Biondich, P., Vest, J., Allen, K., Amlung, J., &amp; Thomas, J. (2026). <em>Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone &amp; McLean IS Success Model.</em> Available at: https://regenstrief.github.io/aci/v3/
         </div>
 
         <h4>Authors</h4>
@@ -1266,7 +1266,7 @@ function MethodsTab({ setTab }) {
         </div>
 
         <p style={{marginTop:18, fontSize:14, display:'flex', gap:18, flexWrap:'wrap'}}>
-          <a href="https://github.com/pbiondich/aci" target="_blank" rel="noopener" className="ext">Repository on GitHub →</a>
+          <a href="https://github.com/regenstrief/aci" target="_blank" rel="noopener" className="ext">Repository on GitHub →</a>
           <a href={`${REPO_BASE}/README.md`} target="_blank" rel="noopener" className="ext">README</a>
           <a href={`${REPO_BASE}/LICENSE`} target="_blank" rel="noopener" className="ext">License (CC BY-SA 4.0)</a>
         </p>

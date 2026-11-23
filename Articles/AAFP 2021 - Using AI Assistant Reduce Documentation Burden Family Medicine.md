@@ -88,4 +88,4 @@ Also hosted on Suki's website (vendor mirror). Abstract-level detail obtained fr
 
 ## License
 
-This file is part of the [ACI Structured Evidence Review](https://github.com/pbiondich/aci), licensed under [CC BY-SA 4.0](../LICENSE). If you extend this work, consider contributing back via a pull request.
+This file is part of the [ACI Structured Evidence Review](https://github.com/regenstrief/aci), licensed under [CC BY-SA 4.0](../LICENSE). If you extend this work, consider contributing back via a pull request.

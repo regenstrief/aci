@@ -146,7 +146,7 @@ function App() {
           <div style={{borderTop:'1px solid var(--rule)', paddingTop:18, display:'flex', justifyContent:'space-between', alignItems:'center', fontSize:12, color:'var(--ink-3)', fontFamily:'Inter, sans-serif', letterSpacing:'0.04em', flexWrap:'wrap', gap:12}}>
             <span>v.33 · July 2026 · 54 studies · 494 measure rows · 23 canonical · 12 draft</span>
             <span style={{display:'flex', gap:18}}>
-              <a href="https://github.com/pbiondich/aci" target="_blank" rel="noopener" style={{color:'var(--ink-3)', textDecoration:'none', textTransform:'uppercase', letterSpacing:'0.12em', fontWeight:600}}>GitHub</a>
+              <a href="https://github.com/regenstrief/aci" target="_blank" rel="noopener" style={{color:'var(--ink-3)', textDecoration:'none', textTransform:'uppercase', letterSpacing:'0.12em', fontWeight:600}}>GitHub</a>
               <a href="#methods" style={{color:'var(--ink-3)', textDecoration:'none', textTransform:'uppercase', letterSpacing:'0.12em', fontWeight:600}}>Methods</a>
             </span>
           </div>

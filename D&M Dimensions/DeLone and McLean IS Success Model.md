@@ -45,4 +45,4 @@ The model proposes a causal flow:
 *D&M Dimensions | Suki Literature Review Vault | Created 2026-03-25, updated 2026-04-15*
 *Canonical measures derived 2026-03-25 from full 54-paper corpus analysis*
 
-*Licensed under [CC BY-SA 4.0](../LICENSE) — [github.com/pbiondich/aci](https://github.com/pbiondich/aci)*
+*Licensed under [CC BY-SA 4.0](../LICENSE) — [github.com/regenstrief/aci](https://github.com/regenstrief/aci)*

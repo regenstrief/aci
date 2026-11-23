@@ -56,7 +56,7 @@ Each of the 54 articles was reviewed in full text and its outcome measures extra
 
 ## Web Application
 
-The interactive webapp at [pbiondich.github.io/aci/v4](https://pbiondich.github.io/aci/v4/) provides eight views:
+The interactive webapp at [regenstrief.github.io/aci/v4](https://regenstrief.github.io/aci/v4/) provides eight views:
 
 1. **Overview** : key findings at a glance
 2. **Canonical Measures** : detailed definitions, findings, and paper lists for all 25 measures
@@ -67,11 +67,11 @@ The interactive webapp at [pbiondich.github.io/aci/v4](https://pbiondich.github.
 7. **Study Corpus** : corpus-wide statistics and distributions
 8. **Level of Rigor** : tiered quality assessment (work in progress)
 
-Tabs are shareable via URL hash (e.g., `pbiondich.github.io/aci/v3/#guide`).
+Tabs are shareable via URL hash (e.g., `regenstrief.github.io/aci/v4/#guide`).
 
 ### Architecture
 
-The webapp uses a zero-build-step architecture: an HTML shell with separate JSX component files transpiled at load time by Babel Standalone, React 18.3.1 via CDN, and static JSON data files. No npm, no webpack, no local build tooling. The classic v1 single-file version remains available at [pbiondich.github.io/aci](https://pbiondich.github.io/aci/).
+The webapp uses a zero-build-step architecture: an HTML shell with separate JSX component files transpiled at load time by Babel Standalone, React 18.3.1 via CDN, and static JSON data files. No npm, no webpack, no local build tooling. The classic v1 single-file version remains available at [regenstrief.github.io/aci](https://regenstrief.github.io/aci/).
 
 ## Local Setup
 
@@ -114,7 +114,7 @@ This is an active research project. If you're interested in contributing article
 
 If referencing this work, please cite as:
 
-> Biondich, P. et al. (2026). Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone & McLean IS Success Model. Available at: https://pbiondich.github.io/aci/v3/
+> Biondich, P. et al. (2026). Evaluating Ambient Clinical Intelligence: A Structured Evidence Review Using the DeLone & McLean IS Success Model. Available at: https://regenstrief.github.io/aci/v4/
 
 ## License
 
