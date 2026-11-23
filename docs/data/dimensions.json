@@ -14,7 +14,7 @@
       "Cognitive and task load",
       "Professional fulfillment and meaningfulness"
     ],
-    "paperCount": 38
+    "paperCount": 39
   },
   {
     "code": "IQ",
@@ -30,7 +30,7 @@
       "Automated text similarity metrics (ROUGE, BERTScore), methodological",
       "Coding accuracy (ICD-10, HCC capture), insofar as it reflects documentation completeness"
     ],
-    "paperCount": 37
+    "paperCount": 38
   },
   {
     "code": "OI",
@@ -48,7 +48,7 @@
       "ED flow metrics (door-to-room, length of stay)",
       "System-level billing and compliance metrics"
     ],
-    "paperCount": 27
+    "paperCount": 28
   },
   {
     "code": "SQ",
@@ -98,7 +98,7 @@
       "Long-term use intent and recommendation intention",
       "User adoption predictors (what characteristics predict use)"
     ],
-    "paperCount": 43
+    "paperCount": 26
   },
   {
     "code": "US",
@@ -113,6 +113,6 @@
       "Provider satisfaction and usability ratings (SUS, UTAUT, Likert)",
       "Provider trust in AI / skepticism about AI errors"
     ],
-    "paperCount": 40
+    "paperCount": 41
   }
 ]
