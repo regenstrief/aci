@@ -105,7 +105,10 @@ function extractTable(content, sectionHeading) {
   const rows = [];
   for (let i = separatorIdx + 1; i < lines.length; i++) {
     const line = lines[i].trim();
-    if (!line || !line.includes('|')) continue;
+    // A markdown table ends at the first line that isn't a table row. Without
+    // this, later pipe-delimited text in the section (e.g. the "*Reviewed by
+    // ... | Source: ... | Template v2.0 ...*" footer) was parsed as a row.
+    if (!line.startsWith('|')) break;
     const cells = line
       .split('|')
       .map(c => c.trim())
