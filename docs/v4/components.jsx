@@ -270,3 +270,48 @@ Object.assign(window, {
   getDesignBreakdown, formatDesignBreakdown,
   HBar, DotGrid, Modal
 });
+
+/* ============================================================
+   Site-wide numbers.
+   Every count shown on the site is derived here from the loaded JSON
+   (docs/data/*.json, generated from the markdown vault). Do not type
+   counts into page text; add a field here and reference it instead.
+   ============================================================ */
+const SITE_VERSION = 'v.34 · November 2026';
+
+function numWords(n) {
+  const ones = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+  const tens = ['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+  if (!Number.isInteger(n) || n < 0 || n > 999) return String(n);
+  if (n < 20) return ones[n];
+  if (n < 100) return tens[Math.floor(n/10)] + (n % 10 ? '-' + ones[n % 10] : '');
+  return ones[Math.floor(n/100)] + ' hundred' + (n % 100 ? ' and ' + numWords(n % 100) : '');
+}
+function capFirst(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+function plural(n, one, many) { return n === 1 ? one : many; }
+
+function computeStats(articles, measures, drafts, dimensions) {
+  const rcts = articles.filter(a => a.studyDesign === 'RCT');
+  const years = articles.map(a => parseInt(a.year, 10)).filter(y => !isNaN(y));
+  const dimPapers = {};
+  DIM_CODES.forEach(c => {
+    const d = dimensions.find(x => x.code === c);
+    dimPapers[c] = d ? (d.paperCount || 0) : 0;
+  });
+  const cmPapers = {};
+  measures.forEach(m => { cmPapers[m.id] = m.paperCount ?? (m.papers || []).length; });
+  return {
+    studies: articles.length,
+    rawRows: articles.reduce((n, a) => n + (a.measures || []).length, 0),
+    canonical: measures.length,
+    drafts: drafts.length,
+    dims: dimensions.length,
+    rcts: rcts.length,
+    rctNames: rcts.map(a => a.id.split(' - ')[0]).join(', '),
+    yearMin: years.length ? Math.min(...years) : '',
+    yearMax: years.length ? Math.max(...years) : '',
+    dimPapers,
+    cmPapers
+  };
+}
+Object.assign(window, { SITE_VERSION, numWords, capFirst, plural, computeStats });

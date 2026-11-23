@@ -1,5 +1,5 @@
 /* Root app */
-const { useState: useStateA, useEffect: useEffectA } = React;
+const { useState: useStateA, useEffect: useEffectA, useMemo: useMemoA } = React;
 
 const TABS = [
   { id:'overview',   label:'Overview',           idx:'I' },
@@ -40,6 +40,8 @@ function App() {
   const [expandedDraft, setExpandedDraft] = useStateA(null);
   const [guideRole, setGuideRole] = useStateA('CMIO');
 
+  const stats = useMemoA(() => computeStats(articles, measures, drafts, dimensions), [articles, measures, drafts, dimensions]);
+
   useEffectA(() => {
     const onHash = () => setTabRaw(getHash());
     window.addEventListener('hashchange', onHash);
@@ -77,7 +79,7 @@ function App() {
         <div className="masthead-meta">
           <span>Structured Evidence Review</span>
           <span className="dot"/>
-          <span>v.31 · May 2026</span><span style={{marginLeft:10, fontSize:10, fontWeight:700, letterSpacing:'0.1em', color:'var(--rust)', border:'1px solid var(--rust)', padding:'2px 6px'}}>DRAFT</span>
+          <span>{SITE_VERSION}</span><span style={{marginLeft:10, fontSize:10, fontWeight:700, letterSpacing:'0.1em', color:'var(--rust)', border:'1px solid var(--rust)', padding:'2px 6px'}}>DRAFT</span>
         </div>
       </header>
 
@@ -98,15 +100,15 @@ function App() {
         <div className="loading">Loading the corpus…</div>
       ) : (
         <main data-screen-label={tab}>
-          {tab === 'overview'  && <OverviewTab articles={articles} measures={measures} draftMeasures={drafts} setTab={setTab}/>}
-          {tab === 'measures'  && <MeasuresTab measures={measures} expanded={expandedMeasure} setExpanded={setExpandedMeasure} articles={articles} onSelectArticle={setSelectedArticle}/>}
+          {tab === 'overview'  && <OverviewTab articles={articles} measures={measures} draftMeasures={drafts} stats={stats} setTab={setTab}/>}
+          {tab === 'measures'  && <MeasuresTab stats={stats} measures={measures} expanded={expandedMeasure} setExpanded={setExpandedMeasure} articles={articles} onSelectArticle={setSelectedArticle}/>}
           {tab === 'guide'     && <GuideTab measures={measures} drafts={drafts} role={guideRole} setRole={setGuideRole}/>}
           {tab === 'drafts'    && <DraftsTab drafts={drafts} expanded={expandedDraft} setExpanded={setExpandedDraft}/>}
           {tab === 'articles'  && <ArticlesTab articles={articles} selected={selectedArticle} setSelected={setSelectedArticle}/>}
           {tab === 'framework' && <FrameworkTab dimensions={dimensions} measures={measures} articles={articles}/>}
-          {tab === 'corpus'    && <CorpusTab articles={articles}/>}
+          {tab === 'corpus'    && <CorpusTab articles={articles} stats={stats}/>}
           {tab === 'rigor'     && <RigorTab measures={measures} articles={articles}/>}
-          {tab === 'methods'   && <MethodsTab setTab={setTab}/>}
+          {tab === 'methods'   && <MethodsTab setTab={setTab} stats={stats}/>}
           {tab === 'mapping-guide' && <MappingGuideTab setTab={setTab}/>}
         </main>
       )}
@@ -144,7 +146,7 @@ function App() {
             </div>
           </div>
           <div style={{borderTop:'1px solid var(--rule)', paddingTop:18, display:'flex', justifyContent:'space-between', alignItems:'center', fontSize:12, color:'var(--ink-3)', fontFamily:'Inter, sans-serif', letterSpacing:'0.04em', flexWrap:'wrap', gap:12}}>
-            <span>v.33 · July 2026 · 54 studies · 494 measure rows · 23 canonical · 12 draft</span>
+            <span>{SITE_VERSION}{loaded && <> · {stats.studies} studies · {stats.rawRows} measure rows · {stats.canonical} canonical · {stats.drafts} draft</>}</span>
             <span style={{display:'flex', gap:18}}>
               <a href="https://github.com/regenstrief/aci" target="_blank" rel="noopener" style={{color:'var(--ink-3)', textDecoration:'none', textTransform:'uppercase', letterSpacing:'0.12em', fontWeight:600}}>GitHub</a>
               <a href="#methods" style={{color:'var(--ink-3)', textDecoration:'none', textTransform:'uppercase', letterSpacing:'0.12em', fontWeight:600}}>Methods</a>
